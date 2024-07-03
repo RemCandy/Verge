@@ -223,7 +223,8 @@ proxy-groups:
 
 # 规则地址
 rule-providers:
-  LocalAreaNetwork: # Provider 名称
+  # Provider 名称
+  LocalAreaNetwork: 
     type: http
     behavior: classical # domain, ipcidr or classical (premium core only)
     path: ./rule_provider/LocalAreaNetwork.yaml
