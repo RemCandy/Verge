@@ -9,7 +9,7 @@ dns:
   enable: true
   listen: 127.0.0.1:5335
   default-nameserver: [180.184.1.1, 119.29.29.29, 223.5.5.5]
-  ipv6: false
+  ipv6: true
   use-hosts: true
   enhanced-mode: fake-ip
   fake-ip-filter: ["*.n.n.srv.nintendo.net", +.stun.playstation.net, xbox.*.*.microsoft.com, "*.msftncsi.com", "*.msftconnecttest.com", WORKGROUP, "*.lan", stun.*.*.*, stun.*.*, time.windows.com, time.nist.gov, time.apple.com, time.asia.apple.com, "*.ntp.org.cn", "*.openwrt.pool.ntp.org", time1.cloud.tencent.com, time.ustc.edu.cn, pool.ntp.org, ntp.ubuntu.com, "*.*.xboxlive.com", speedtest.cros.wr.pvp.net]
@@ -17,7 +17,7 @@ dns:
   nameserver-policy: {+.tmall.com: 223.5.5.5, +.taobao.com: 223.5.5.5, +.alicdn.com: 223.5.5.5, +.aliyun.com: 223.5.5.5, +.alipay.com: 223.5.5.5, +.alibaba.com: 223.5.5.5, +.qq.com: 119.29.29.29, +.tencent.com: 119.29.29.29, +.weixin.com: 119.29.29.29, +.qpic.cn: 119.29.29.29, +.jd.com: 119.29.29.29, +.bilibili.com: 119.29.29.29, +.hdslb.com: 119.29.29.29, +.163.com: 119.29.29.29, +.126.com: 119.29.29.29, +.126.net: 119.29.29.29, +.127.net: 119.29.29.29, +.netease.com: 119.29.29.29, +.baidu.com: 223.5.5.5, +.bdstatic.com: 223.5.5.5, +.bilivideo.+: 119.29.29.29, +.iqiyi.com: 119.29.29.29, +.douyinvod.com: 180.184.1.1, +.douyin.com: 180.184.1.1, +.douyincdn.com: 180.184.1.1, +.douyinpic.com: 180.184.1.1, +.feishu.cn: 180.184.1.1}
   fallback: [https://101.101.101.101/dns-query, https://public.dns.iij.jp/dns-query, https://208.67.220.220/dns-query]
   fallback-filter: {geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 223.75.236.241/32, 182.43.124.6/32, 106.74.25.198/32, 183.192.65.101/32], domain: [+.google.cn, +.paoluz.com, +.paoluz.link, +.paoluz.xyz, +.sodacity-funk.xyz, +.nloli.xyz, +.bianyuan.xyz, +.happynothings031.xyz, +.jsdelivr.net, +.proton.me]}
- #dns: #DNS 设置一般无需打开，如果你坚持想用，请确保你知道在做什么
+#dns: #DNS 设置一般无需打开，如果你坚持想用，请确保你知道在做什么
   #enable: true
   #listen: 0.0.0.0:53
   #ipv6: false
@@ -40,7 +40,7 @@ dns:
 proxy-providers:
   app.nloli.xyz:
     type: http
-    url: https://proxyprovider.entertang.com/api/convert?url=https%3A%2F%2Fapp.nloli.xyz%2Fsub%3Ftarget%3Dclash%26udp%3Dtrue%26config%3Dhttps%253A%252F%252Fapp.nloli.xyz%252Fstatic%252FACL4SSR_Online.ini%26exclude%3DGAME%26emoji%3Dtrue%26filename%3DPaoluz_Cat4SSR%26new_name%3Dtrue%26url%3Dhttps%3A%2F%2Frss.paoluz.xyz%2Flink%2FC7LXoe7P3RiIMAjt%3Fsub%3D1&target=clash
+    url: https://app.nloli.xyz/sub?target=clash&udp=true&config=https%3A%2F%2Fraw.githubusercontent.com%2FHynoR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&exclude=GAME&emoji=true&filename=Paoluz_Cat4SSR&new_name=true&url=https://rss.paoluz.xyz/link/Ncn9D2eDo1jQlBEo?sub=1
     interval: 3600
     path: ./app.nloli.xyz.yaml
     health-check:
@@ -51,7 +51,7 @@ proxy-providers:
   
   ding.cyuuu.co:
     type: http
-    url: https://proxyprovider.entertang.com/api/convert?url=https%3A%2F%2Fding.cyuuu.co%2Flink%2FAgvyw3UgXILrEBva%3Fclash%3D1&target=clash
+    url: https://ding.dingdian.online/link/Agvyw3UgXILrEBva?clash=1
     interval: 3600
     path: ./ding.cyuuu.co.yaml
     health-check:
@@ -60,18 +60,32 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
+  aca.dog:
+    type: http
+    url: https://api.acaisbest.shop/api/v1/client/subscribe?token=2480a7500e03b2733406d3190f3d16b0
+    interval: 3600
+    path: ./aca.dog.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
+
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
-      - 🔰 香港
-      - 🔰 美国
-      - 🔰 日本
-      - 🔰 英国
+      - 🏍️ 自动选择
+      - 🇭🇰 香港
+      - 🇺🇸 美国
+      - 🐶 日本
+      - 🇬🇧 英国
+      - 🇸🇬 新加坡
+      - 🏍️ emby
       - 🕳 全球直连
 
-  - name: ♻️ 自动选择
+  - name: 🏍️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 1800
@@ -80,7 +94,7 @@ proxy-groups:
       - app.nloli.xyz
       - ding.cyuuu.co
     
-  - name: 🚀 手动选择
+  - name: 👋 手动选择
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 3600
@@ -88,7 +102,14 @@ proxy-groups:
       - app.nloli.xyz
       - ding.cyuuu.co
 
-  - name: 🔰 香港
+  - name: 👋 acadog手动
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - aca.dog
+
+  - name: 🇭🇰 香港
     type: url-test
     use:
       - app.nloli.xyz
@@ -99,7 +120,7 @@ proxy-groups:
     # disable-udp: true    #是否关闭UDP
     filter: 香港
 
-  - name: 🔰 美国
+  - name: 🇺🇸 美国
     type: url-test
     use:
       - app.nloli.xyz
@@ -110,7 +131,7 @@ proxy-groups:
     # disable-udp: true    #是否关闭UDP
     filter: 美国
 
-  - name: 🔰 日本
+  - name: 🐶 日本
     type: url-test
     use:
       - app.nloli.xyz
@@ -121,7 +142,7 @@ proxy-groups:
     # disable-udp: true    #是否关闭UDP
     filter: 日本
 
-  - name: 🔰 英国
+  - name: 🇬🇧 英国
     type: url-test
     use:
       - app.nloli.xyz
@@ -132,7 +153,18 @@ proxy-groups:
     # disable-udp: true    #是否关闭UDP
     filter: 英国
 
-  - name: 🔰 台湾
+  - name: 🇸🇬 新加坡
+    type: url-test
+    use:
+      - app.nloli.xyz
+      - ding.cyuuu.co
+    tolerance: 50
+    url: http://www.gstatic.com/generate_204    
+    interval: 300
+    # disable-udp: true    #是否关闭UDP
+    filter: 新加坡
+
+  - name: 🇨🇳 台湾
     type: url-test
     use:
       - app.nloli.xyz
@@ -142,6 +174,16 @@ proxy-groups:
     interval: 300
     # disable-udp: true    #是否关闭UDP
     filter: 台湾
+
+  - name: 🏍️ emby
+    type: url-test
+    use:
+      - aca.dog
+    tolerance: 50
+    url: http://www.gstatic.com/generate_204    
+    interval: 300
+    # disable-udp: true    #是否关闭UDP
+    filter: Emby
 
   - name: 🕳 全球直连
     type: select
@@ -154,22 +196,24 @@ proxy-groups:
       - 🕳 全球直连
       - 🚀 节点选择
 
-  - name: Ⓜ️ OneDrive
-    type: select
-    proxies:
-      - 🕳 全球直连
-      - 🚀 节点选择
-
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🕳 全球直连
       - 🚀 节点选择
 
+  - name: ☁️ OpenAI
+    type: select
+    proxies:
+      - 🇺🇸 美国
+      - 🐶 日本
+      - 🇸🇬 新加坡
+      - 🚀 节点选择
+
   - name: 📱 电报信息
     type: select
     proxies:
-      - 🔰 香港
+      - 🇭🇰 香港
       - 🚀 节点选择
 
   - name: 🎮 游戏服务
@@ -187,8 +231,8 @@ proxy-groups:
   - name: 📽 国外媒体
     type: select
     proxies:
-      - 🔰 香港
-      - 🔰 美国
+      - 🇭🇰 香港
+      - 🇺🇸 美国
       - 🚀 节点选择
       - 🕳 全球直连
 
@@ -199,20 +243,25 @@ proxy-groups:
       - 🕳 全球直连
       - 🚀 节点选择
 
-  - name: 📡 故障转移
-    type: fallback         #通过httping URL 当没有ping值时 按顺序自动切换下一个节点
-    proxies: # 按顺序优先级填写
-      - 🔰 香港
-      - 🔰 美国
-      - 🔰 台湾
-      - 🚀 节点选择
-    url: 'http://www.youtube.com/generate_204'
-    interval: 300
+  - name: 📽自建emby
+    type: select
+    proxies:
+      - REJECT
+      - 🏍️ emby
+
+  # - name: 📡 故障转移
+  #   type: fallback         #通过httping URL 当没有ping值时 按顺序自动切换下一个节点
+  #   proxies: # 按顺序优先级填写
+  #     - 🇭🇰 香港
+  #     - 🇺🇸 美国
+  #     - 🇨🇳 台湾
+  #     - 🚀 节点选择
 
   - name: 📹 YouTube Premium
     type: select
     proxies:
-      - 🔰 香港
+      - 🇭🇰 香港
+      - 🇺🇸 美国
       - 🚀 节点选择
 
   - name: 🐟 漏网之鱼
@@ -221,10 +270,42 @@ proxy-groups:
       - 🚀 节点选择
       - 🕳 全球直连
 
+  - name: ☁️ cloudflare
+    type: select
+    proxies:
+      - 🏍️ 自动选择
+      - 🇭🇰 香港
+      - 🇺🇸 美国
+      - 🐶 日本
+      - 🇬🇧 英国
+      - 🇸🇬 新加坡
+      - 🕳 全球直连
+
+  - name: 🐳 Docker
+    type: select
+    proxies:
+      - 🏍️ 自动选择
+      - 🇭🇰 香港
+      - 🇺🇸 美国
+      - 🐶 日本
+      - 🇬🇧 英国
+      - 🇸🇬 新加坡
+      - 🕳 全球直连
+
+  - name: Proxy
+    type: select
+    proxies:
+      - 🏍️ 自动选择
+      - 🇭🇰 香港
+      - 🇺🇸 美国
+      - 🐶 日本
+      - 🇬🇧 英国
+      - 🇸🇬 新加坡
+      - 🕳 全球直连
+
 # 规则地址
 rule-providers:
-  # Provider 名称
-  LocalAreaNetwork: 
+  LocalAreaNetwork: # Provider 名称
     type: http
     behavior: classical # domain, ipcidr or classical (premium core only)
     path: ./rule_provider/LocalAreaNetwork.yaml
@@ -241,7 +322,7 @@ rule-providers:
   NTP-Service:
     type: http
     behavior: classical
-    path: ./rule_provider/NTP-Service.yaml
+    path: ./rule_provider/NTP-Service
     url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/NTPService/NTPService.yaml
     interval: 86400
     
@@ -364,6 +445,34 @@ rule-providers:
     url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Figma/Figma.yaml
     interval: 86400
 
+  Claude:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Claude.yaml
+    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Claude/Claude.yaml
+    interval: 86400
+  
+  Docker:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Docker.yaml
+    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Docker/Docker.yaml
+    interval: 86400
+
+  Cloudflare:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Cloudflare.yaml
+    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Cloudflare/Cloudflare.yaml
+    interval: 86400
+
+  Tencent:
+    type: http
+    behavior: classical
+    path: ./rule_provider/Tencent.yaml
+    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Tencent/Tencent.yaml
+    interval: 86400
+
 # 规则
 rules:
   - PROCESS-NAME,v2ray,DIRECT
@@ -415,32 +524,38 @@ rules:
 # 这些是自定义规则，想要的可以继续加
   - DOMAIN-SUFFIX,tongji.baidu.com,DIRECT
   - DOMAIN-SUFFIX,click.simba.taobao.com,DIRECT
-  - DOMAIN-SUFFIX,behance.net,🔰 美国
-  - DOMAIN-SUFFIX,figma.com,🔰 美国
+  - DOMAIN-SUFFIX,behance.net,🇺🇸 美国
+  - DOMAIN-SUFFIX,figma.com,DIRECT
+  - DOMAIN-SUFFIX,entertang.com,DIRECT
+  - DOMAIN-SUFFIX,entertang.work,DIRECT
+  - DOMAIN-SUFFIX,chatgpt.com, 🇺🇸 美国
+  - DOMAIN-SUFFIX,v2ex.com,🇭🇰 香港
+  - DOMAIN-SUFFIX,stream1.misakaf.org,🏍️ emby
+  - DOMAIN-SUFFIX,stream2.misakaf.org,🏍️ emby
+  - DOMAIN-SUFFIX,stream3.misakaf.org,🏍️ emby
+  - DOMAIN-SUFFIX,emby.misakaf.org,🏍️ emby
 #  - DOMAIN-SUFFIX,freenom.com,🚀 节点选择
 #  - DOMAIN-SUFFIX,line.games,🎮 游戏服务
 #  - DOMAIN-SUFFIX,gameguard.co.kr,🎮 游戏服务
 # 下面的规则是通过上面的rule-provider来确定的
   # - RULE-SET,AAA-daili,🚀 节点选择
   - RULE-SET,LocalAreaNetwork,🕳 全球直连
-  - RULE-SET,UnBan,🕳 全球直连
+  - RULE-SET,Tencent,🕳 全球直连
   - RULE-SET,NTP-Service,🕳 全球直连
+  - RULE-SET,Apple,🕳 全球直连
   - RULE-SET,PayPal,💰 PayPal
-  - RULE-SET,OpenAI,🔰 美国
-  # - RULE-SET,Figma,🔰 香港
-  - RULE-SET,zhihu,🆎 AdBlock
+  - RULE-SET,OpenAI,🇺🇸 美国
+  - RULE-SET,Claude,🇺🇸 美国
+  - RULE-SET,Docker,🐳 Docker
+  - RULE-SET,PROXY,Proxy
   - RULE-SET,Advertising,🆎 AdBlock
   - RULE-SET,youtube,📹 YouTube Premium
-  - RULE-SET,youtubemusic,📹 YouTube Premium
-  - RULE-SET,OneDrive,Ⓜ️ OneDrive
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,Telegram,📱 电报信息
   - RULE-SET,GlobalMedia,📽 国外媒体
   - RULE-SET,PrivateTracker,🕳 全球直连
-  - RULE-SET,Game,🎮 游戏服务
   - RULE-SET,CloudCN,🕳 全球直连
   - RULE-SET,ChinaMax,🕳 全球直连
-  - RULE-SET,PROXY,🚀 节点选择
+  - RULE-SET,Cloudflare,☁️ cloudflare
   - GEOIP,CN,DIRECT
   - MATCH,🐟 漏网之鱼
