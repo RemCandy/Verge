@@ -40,7 +40,7 @@ dns:
 proxy-providers:
   app.nloli.xyz:
     type: http
-    url: https://app.nloli.xyz/sub?target=clash&udp=true&config=https%3A%2F%2Fraw.githubusercontent.com%2FHynoR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&exclude=GAME&emoji=true&filename=Paoluz_Cat4SSR&new_name=true&url=https://rss.paoluz.xyz/link/Ncn9D2eDo1jQlBEo?sub=1
+    url: https://subconv.entertang.com/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2Frss.paoluz.xyz%2Flink%2FNcn9D2eDo1jQlBEo%3Fsub%3D1
     interval: 3600
     path: ./app.nloli.xyz.yaml
     health-check:
@@ -49,20 +49,20 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
   
-  ding.cyuuu.co:
-    type: http
-    url: https://ding.dingdian.online/link/Agvyw3UgXILrEBva?clash=1
-    interval: 3600
-    path: ./ding.cyuuu.co.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204
+  # ding.cyuuu.co:
+  #   type: http
+  #   url: https://ding.dingdian.online/link/Agvyw3UgXILrEBva?clash=1
+  #   interval: 3600
+  #   path: ./ding.cyuuu.co.yaml
+  #   health-check:
+  #     enable: true
+  #     interval: 600
+  #     # lazy: true
+  #     url: http://www.gstatic.com/generate_204
 
   aca.dog:
     type: http
-    url: https://api.acaisbest.shop/api/v1/client/subscribe?token=2480a7500e03b2733406d3190f3d16b0
+    url: https://subconv.entertang.com/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2Fapi.acaisbest.shop%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D2480a7500e03b2733406d3190f3d16b0
     interval: 3600
     path: ./aca.dog.yaml
     health-check:
@@ -71,6 +71,16 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
+  nginxcatnet.xyz:
+    type: http
+    url: https://subconv.entertang.com/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2F8411d2cb-fd9f-409f-a85b-5487fbe2c232.nginxcatnet.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D87f4877813f83ecf22a059645c69c0ca
+    interval: 3600
+    path: ./nginxcatnet.xyz.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
 
 proxy-groups:
   - name: 🚀 节点选择
@@ -92,7 +102,8 @@ proxy-groups:
     tolerance: 80
     use:
       - app.nloli.xyz
-      - ding.cyuuu.co
+      - nginxcatnet.xyz
+    filter: "新加坡|Singapore|美国|United States|日本|Japan"
     
   - name: 👋 手动选择
     type: select
@@ -100,7 +111,7 @@ proxy-groups:
     interval: 3600
     use:
       - app.nloli.xyz
-      - ding.cyuuu.co
+      - nginxcatnet.xyz
 
   - name: 👋 acadog手动
     type: select
@@ -113,67 +124,67 @@ proxy-groups:
     type: url-test
     use:
       - app.nloli.xyz
-      - ding.cyuuu.co
+      - nginxcatnet.xyz
     tolerance: 50
     url: http://www.gstatic.com/generate_204    
     interval: 300
     # disable-udp: true    #是否关闭UDP
-    filter: 香港
+    filter: "香港|Hong Kong"
 
   - name: 🇺🇸 美国
     type: url-test
     use:
       - app.nloli.xyz
-      - ding.cyuuu.co
+      - nginxcatnet.xyz
     tolerance: 50
     url: http://www.gstatic.com/generate_204    
     interval: 300
     # disable-udp: true    #是否关闭UDP
-    filter: 美国
+    filter: "美国|United States"
 
   - name: 🐶 日本
     type: url-test
     use:
       - app.nloli.xyz
-      - ding.cyuuu.co
+      - nginxcatnet.xyz
     tolerance: 50
     url: http://www.gstatic.com/generate_204    
     interval: 300
     # disable-udp: true    #是否关闭UDP
-    filter: 日本
+    filter: "日本|Japan"
 
   - name: 🇬🇧 英国
     type: url-test
     use:
       - app.nloli.xyz
-      - ding.cyuuu.co
+      - nginxcatnet.xyz
     tolerance: 50
     url: http://www.gstatic.com/generate_204    
     interval: 300
     # disable-udp: true    #是否关闭UDP
-    filter: 英国
+    filter: "英国|United Kingdom"
 
   - name: 🇸🇬 新加坡
     type: url-test
     use:
       - app.nloli.xyz
-      - ding.cyuuu.co
+      - nginxcatnet.xyz
     tolerance: 50
     url: http://www.gstatic.com/generate_204    
     interval: 300
     # disable-udp: true    #是否关闭UDP
-    filter: 新加坡
+    filter: "新加坡|Singapore"
 
   - name: 🇨🇳 台湾
     type: url-test
     use:
       - app.nloli.xyz
-      - ding.cyuuu.co
+      - nginxcatnet.xyz
     tolerance: 50
     url: http://www.gstatic.com/generate_204    
     interval: 300
     # disable-udp: true    #是否关闭UDP
-    filter: 台湾
+    filter: "台湾|Taiwan"
 
   - name: 🏍️ emby
     type: url-test
@@ -213,7 +224,8 @@ proxy-groups:
   - name: 📱 电报信息
     type: select
     proxies:
-      - 🇭🇰 香港
+      - 🇸🇬 新加坡
+      - 🇺🇸 美国
       - 🚀 节点选择
 
   - name: 🎮 游戏服务
@@ -231,7 +243,7 @@ proxy-groups:
   - name: 📽 国外媒体
     type: select
     proxies:
-      - 🇭🇰 香港
+      - 🇸🇬 新加坡
       - 🇺🇸 美国
       - 🚀 节点选择
       - 🕳 全球直连
@@ -260,7 +272,7 @@ proxy-groups:
   - name: 📹 YouTube Premium
     type: select
     proxies:
-      - 🇭🇰 香港
+      - 🇸🇬 新加坡
       - 🇺🇸 美国
       - 🚀 节点选择
 
@@ -274,7 +286,6 @@ proxy-groups:
     type: select
     proxies:
       - 🏍️ 自动选择
-      - 🇭🇰 香港
       - 🇺🇸 美国
       - 🐶 日本
       - 🇬🇧 英国
@@ -285,7 +296,6 @@ proxy-groups:
     type: select
     proxies:
       - 🏍️ 自动选择
-      - 🇭🇰 香港
       - 🇺🇸 美国
       - 🐶 日本
       - 🇬🇧 英国
@@ -296,7 +306,6 @@ proxy-groups:
     type: select
     proxies:
       - 🏍️ 自动选择
-      - 🇭🇰 香港
       - 🇺🇸 美国
       - 🐶 日本
       - 🇬🇧 英国
@@ -529,7 +538,7 @@ rules:
   - DOMAIN-SUFFIX,entertang.com,DIRECT
   - DOMAIN-SUFFIX,entertang.work,DIRECT
   - DOMAIN-SUFFIX,chatgpt.com, 🇺🇸 美国
-  - DOMAIN-SUFFIX,v2ex.com,🇭🇰 香港
+  - DOMAIN-SUFFIX,v2ex.com,🇸🇬 新加坡
   - DOMAIN-SUFFIX,stream1.misakaf.org,🏍️ emby
   - DOMAIN-SUFFIX,stream2.misakaf.org,🏍️ emby
   - DOMAIN-SUFFIX,stream3.misakaf.org,🏍️ emby
