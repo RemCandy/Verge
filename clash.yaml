@@ -40,7 +40,7 @@ dns:
 proxy-providers:
   app.nloli.xyz:
     type: http
-    url: https://subconv.entertang.com/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2Frss.paoluz.xyz%2Flink%2FNcn9D2eDo1jQlBEo%3Fsub%3D1
+    url: https://subconv.entertang.work/sub?target=clash&url=https%3A%2F%2Frss.paoluz.xyz%2Flink%2FNcn9D2eDo1jQlBEo%3Fsub%3D1
     interval: 3600
     path: ./app.nloli.xyz.yaml
     health-check:
@@ -62,7 +62,7 @@ proxy-providers:
 
   aca.dog:
     type: http
-    url: https://subconv.entertang.com/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2Fapi.acaisbest.shop%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D2480a7500e03b2733406d3190f3d16b0
+    url: https://subconv.entertang.work/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2Fapi.acaisbest.shop%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D2480a7500e03b2733406d3190f3d16b0
     interval: 3600
     path: ./aca.dog.yaml
     health-check:
@@ -73,7 +73,7 @@ proxy-providers:
 
   nginxcatnet.xyz:
     type: http
-    url: https://subconv.entertang.com/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2F8411d2cb-fd9f-409f-a85b-5487fbe2c232.nginxcatnet.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D87f4877813f83ecf22a059645c69c0ca
+    url: https://subconv.entertang.work/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2F8411d2cb-fd9f-409f-a85b-5487fbe2c232.nginxcatnet.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D87f4877813f83ecf22a059645c69c0ca
     interval: 3600
     path: ./nginxcatnet.xyz.yaml
     health-check:
@@ -471,8 +471,8 @@ rule-providers:
   Cloudflare:
     type: http
     behavior: classical
-    path: ./rule_provider/Cloudflare.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Cloudflare/Cloudflare.yaml
+    path: ./rules/Cloudflare.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.list
     interval: 86400
 
   Tencent:
