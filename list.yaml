@@ -1,8 +1,41 @@
-mixed-port: 7890
-allow-lan: true
+proxy-providers:
+  banana:
+    type: http
+    url: https://link02.pikachucloud.site/api/v1/client/subscribe?token=1e86aee55af2c45e71cae17cf5bd6806
+    interval: 3600
+    path: ./banana.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204  
+  orange:
+    type: http
+    url: https://gist.githubusercontent.com/EnterTang/5b50cc967347fe5b96d60a492cea20d3/raw/clash.yaml
+    interval: 3600
+    path: ./orange.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204  
+
+  ninecloud:
+    type: http
+    url: https://get.ninesub.us.kg/api/v1/client/subscribe?token=9be727d513abd796221c19d6416bd31c
+    interval: 3600
+    path: ./aca.dog.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
 mode: rule
-log-level: error
 ipv6: true
+log-level: error
+allow-lan: true
+mixed-port: 7890
 unified-delay: false
 tcp-concurrent: true
 external-controller-tls: 127.0.0.1:9090
@@ -154,38 +187,6 @@ dns:
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-
-proxy-providers:
-  banana:
-    type: http
-    url: https://subconv.entertang.com/sub?target=clash&exclude=%28TG%E9%A2%91%E9%81%93%7C%E9%A2%91%E9%81%93%7C%E5%AE%98%E7%BD%91%7C%E5%89%A9%E4%BD%99%29&sort=true&url=https%3A%2F%2F3a0de768eee067be6bbdaf4d877c9d19.52pokemon.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D1e86aee55af2c45e71cae17cf5bd6806
-    interval: 3600
-    path: ./banana.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204  
-  orange:
-    type: http
-    url: https://gist.githubusercontent.com/EnterTang/5b50cc967347fe5b96d60a492cea20d3/raw/clash.yaml
-    interval: 3600
-    path: ./orange.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204  
-  apple: 
-    type: http
-    url: https://djjc.cfd/api/v1/client/subscribe?token=e933cf00b151c045adbe829e83c99ffa
-    interval: 3600
-    path: ./apple.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204  
 
 proxy-groups:
   - {name: 🚀 节点选择, type: select, proxies: [🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 👋🏻 手动选择, 🎯 全球直连]}
