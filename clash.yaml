@@ -1,570 +1,293 @@
-# Clash 配置格式
+# url 里填写自己的订阅,名称不能重复
+proxy-providers:
+  subhub_all:
+    url: "https://subhub.153561999.xyz/2cXaAxRGfddmGz2yx1wAtet/download/collection/fantistiac"
+    type: http
+    interval: 86400
+    path: ./subhub_all.yaml
+    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
+  
+    
+proxies: 
+  - name: "直连"
+    type: direct
+
 mixed-port: 7890
-allow-lan: true
-mode: Rule
-log-level: info
 ipv6: false
+allow-lan: true
+unified-delay: false
+tcp-concurrent: true
+external-controller: 127.0.0.1:9090
+external-ui: ui
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+keep-alive-interval: 1800
+
+geodata-mode: true
+geodata-loader: standard
+geo-auto-update: false
+geo-update-interval: 24
+geox-url:
+  geoip: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/Country.mmdb"
+  asn: "https://mirror.ghproxy.com/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+
+find-process-mode: strict
+global-client-fingerprint: chrome
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+    - "+.push.apple.com"
+
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
 
 dns:
   enable: true
-  listen: 127.0.0.1:5335
-  default-nameserver: [180.184.1.1, 119.29.29.29, 223.5.5.5]
-  ipv6: true
-  use-hosts: true
+  ipv6: false
+  respect-rules: true
   enhanced-mode: fake-ip
-  fake-ip-filter: ["*.n.n.srv.nintendo.net", +.stun.playstation.net, xbox.*.*.microsoft.com, "*.msftncsi.com", "*.msftconnecttest.com", WORKGROUP, "*.lan", stun.*.*.*, stun.*.*, time.windows.com, time.nist.gov, time.apple.com, time.asia.apple.com, "*.ntp.org.cn", "*.openwrt.pool.ntp.org", time1.cloud.tencent.com, time.ustc.edu.cn, pool.ntp.org, ntp.ubuntu.com, "*.*.xboxlive.com", speedtest.cros.wr.pvp.net]
-  nameserver: [tls://223.5.5.5:853, https://223.6.6.6/dns-query, https://120.53.53.53/dns-query]
-  nameserver-policy: {+.tmall.com: 223.5.5.5, +.taobao.com: 223.5.5.5, +.alicdn.com: 223.5.5.5, +.aliyun.com: 223.5.5.5, +.alipay.com: 223.5.5.5, +.alibaba.com: 223.5.5.5, +.qq.com: 119.29.29.29, +.tencent.com: 119.29.29.29, +.weixin.com: 119.29.29.29, +.qpic.cn: 119.29.29.29, +.jd.com: 119.29.29.29, +.bilibili.com: 119.29.29.29, +.hdslb.com: 119.29.29.29, +.163.com: 119.29.29.29, +.126.com: 119.29.29.29, +.126.net: 119.29.29.29, +.127.net: 119.29.29.29, +.netease.com: 119.29.29.29, +.baidu.com: 223.5.5.5, +.bdstatic.com: 223.5.5.5, +.bilivideo.+: 119.29.29.29, +.iqiyi.com: 119.29.29.29, +.douyinvod.com: 180.184.1.1, +.douyin.com: 180.184.1.1, +.douyincdn.com: 180.184.1.1, +.douyinpic.com: 180.184.1.1, +.feishu.cn: 180.184.1.1}
-  fallback: [https://101.101.101.101/dns-query, https://public.dns.iij.jp/dns-query, https://208.67.220.220/dns-query]
-  fallback-filter: {geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 223.75.236.241/32, 182.43.124.6/32, 106.74.25.198/32, 183.192.65.101/32], domain: [+.google.cn, +.paoluz.com, +.paoluz.link, +.paoluz.xyz, +.sodacity-funk.xyz, +.nloli.xyz, +.bianyuan.xyz, +.happynothings031.xyz, +.jsdelivr.net, +.proton.me]}
-#dns: #DNS 设置一般无需打开，如果你坚持想用，请确保你知道在做什么
-  #enable: true
-  #listen: 0.0.0.0:53
-  #ipv6: false
-  #default-nameserver:
-    #- 223.5.5.5
-    #- 119.29.29.29
-  #enhanced-mode: redir-host
-  #nameserver:
-    #- https://doh.pub/dns-query
-    #- https://dns.alidns.com/dns-query
-  #fallback:
-    #- https://1.1.1.1/dns-query
-    #- https://dns.google/dns-query
-  #fallback-filter:
-    #geoip: true
-    #geoip-code: CN
-    #ipcidr:
-      #- 240.0.0.0/4
-
-proxy-providers:
-  app.nloli.xyz:
-    type: http
-    url: https://subconv.entertang.work/sub?target=clash&url=https%3A%2F%2Frss.paoluz.xyz%2Flink%2FNcn9D2eDo1jQlBEo%3Fsub%3D1
-    interval: 3600
-    path: ./app.nloli.xyz.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204
-  
-  # ding.cyuuu.co:
-  #   type: http
-  #   url: https://ding.dingdian.online/link/Agvyw3UgXILrEBva?clash=1
-  #   interval: 3600
-  #   path: ./ding.cyuuu.co.yaml
-  #   health-check:
-  #     enable: true
-  #     interval: 600
-  #     # lazy: true
-  #     url: http://www.gstatic.com/generate_204
-
-  aca.dog:
-    type: http
-    url: https://subconv.entertang.work/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2Fapi.acaisbest.shop%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D2480a7500e03b2733406d3190f3d16b0
-    interval: 3600
-    path: ./aca.dog.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204
-
-  nginxcatnet.xyz:
-    type: http
-    url: https://subconv.entertang.work/sub?target=clash&exclude=%28%E6%B5%81%E9%87%8F%7C%E5%AE%98%E7%BD%91%7C%E9%A6%99%E6%B8%AF%7CHong%20Kong%7C%E9%87%8D%E7%BD%AE%7C%E5%A5%97%E9%A4%90%29&url=https%3A%2F%2F8411d2cb-fd9f-409f-a85b-5487fbe2c232.nginxcatnet.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D87f4877813f83ecf22a059645c69c0ca
-    interval: 3600
-    path: ./nginxcatnet.xyz.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204
+  fake-ip-filter:
+    - "*"
+    - "+.lan"
+    - "+.local"
+    - "+.market.xiaomi.com"
+  nameserver:
+    - "https://120.53.53.53/dns-query"
+    - "https://223.5.5.5/dns-query"
+  proxy-server-nameserver:
+    - "https://120.53.53.53/dns-query"
+    - "https://223.5.5.5/dns-query"
+  nameserver-policy:
+    "rule-set:cn_domain,private_domain":
+      - "https://120.53.53.53/dns-query"
+      - "https://223.5.5.5/dns-query"
+    "rule-set:geolocation-!cn":
+      - "https://dns.cloudflare.com/dns-query"
+      - "https://dns.google/dns-query"
 
 proxy-groups:
-  - name: 🚀 节点选择
+
+  - name: 默认
     type: select
-    proxies:
-      - 🏍️ 自动选择
-      - 🇭🇰 香港
-      - 🇺🇸 美国
-      - 🐶 日本
-      - 🇬🇧 英国
-      - 🇸🇬 新加坡
-      - 🏍️ emby
-      - 🕳 全球直连
+    proxies: [自动选择,香港,台湾,日本,新加坡,美国,全部节点,直连]
 
-  - name: 🏍️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 1800
-    tolerance: 80
-    use:
-      - app.nloli.xyz
-      - nginxcatnet.xyz
-    filter: "新加坡|Singapore|美国|United States|日本|Japan"
-    
-  - name: 👋 手动选择
+  - name: Google
     type: select
-    url: http://www.gstatic.com/generate_204
-    interval: 3600
-    use:
-      - app.nloli.xyz
-      - nginxcatnet.xyz
+    proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
-  - name: 👋 acadog手动
+  - name: Telegram
     type: select
-    url: http://www.gstatic.com/generate_204
-    interval: 3600
-    use:
-      - aca.dog
+    proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
-  - name: 🇭🇰 香港
+  - name: Twitter
+    type: select
+    proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+
+  - name: YouTube
+    type: select
+    proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+
+  - name: Github
+    type: select
+    proxies:  [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+
+  - name: OpenAI
+    type: select
+    proxies:  [默认,台湾,日本,新加坡,美国]
+
+  - name: Microsoft
+    type: select
+    proxies:  [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+
+  - name: 国内
+    type: select
+    proxies:  [直连,默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+
+  - name: 其他
+    type: select
+    proxies:  [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+
+
+  #分隔,下面是地区分组
+  - name: 香港
     type: url-test
-    use:
-      - app.nloli.xyz
-      - nginxcatnet.xyz
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204    
+    include-all-providers: true
+    filter: "(?i)港|hk|hongkong|hong kong"
+    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
-    # disable-udp: true    #是否关闭UDP
-    filter: "香港|Hong Kong"
-
-  - name: 🇺🇸 美国
+    tolerance: 50
+    #lazy: true
+          
+  - name: 台湾
     type: url-test
-    use:
-      - app.nloli.xyz
-      - nginxcatnet.xyz
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204    
+    include-all-providers: true
+    filter: "(?i)台|tw|taiwan"
+    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
-    # disable-udp: true    #是否关闭UDP
-    filter: "美国|United States"
+    tolerance: 50
+    #lazy: true    
 
-  - name: 🐶 日本
+  - name: 日本
     type: url-test
-    use:
-      - app.nloli.xyz
-      - nginxcatnet.xyz
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204    
+    include-all-providers: true
+    filter: "(?i)日本|jp|japan"
+    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
-    # disable-udp: true    #是否关闭UDP
-    filter: "日本|Japan"
+    tolerance: 50
+    #lazy: true    
 
-  - name: 🇬🇧 英国
+  - name: 美国
     type: url-test
-    use:
-      - app.nloli.xyz
-      - nginxcatnet.xyz
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204    
+    include-all-providers: true
+    filter: "(?i)美|us|unitedstates|united states"
+    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
-    # disable-udp: true    #是否关闭UDP
-    filter: "英国|United Kingdom"
+    tolerance: 50
+    #lazy: true    
 
-  - name: 🇸🇬 新加坡
+  - name: 新加坡
     type: url-test
-    use:
-      - app.nloli.xyz
-      - nginxcatnet.xyz
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204    
+    include-all-providers: true
+    filter: "(?i)(新|sg|singapore)"
+    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
-    # disable-udp: true    #是否关闭UDP
-    filter: "新加坡|Singapore"
-
-  - name: 🇨🇳 台湾
-    type: url-test
-    use:
-      - app.nloli.xyz
-      - nginxcatnet.xyz
     tolerance: 50
-    url: http://www.gstatic.com/generate_204    
-    interval: 300
-    # disable-udp: true    #是否关闭UDP
-    filter: "台湾|Taiwan"
-
+    #lazy: true    
+  
   - name: 🏍️ emby
     type: url-test
-    use:
-      - aca.dog
-    tolerance: 50
-    url: http://www.gstatic.com/generate_204    
+    include-all-providers: true
+    filter: "Emby"
+    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
-    # disable-udp: true    #是否关闭UDP
-    filter: Emby
+    tolerance: 50
+    #lazy: true 
 
-  - name: 🕳 全球直连
+  - name: 全部节点
     type: select
-    proxies:
-      - DIRECT
+    include-all: true
 
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - 🕳 全球直连
-      - 🚀 节点选择
+  - name: 自动选择
+    type: url-test
+    include-all: true
+    url: 'http://www.apple.com/library/test/success.html'
+    interval: 300
+    tolerance: 10
 
-  - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      - 🕳 全球直连
-      - 🚀 节点选择
-
-  - name: ☁️ OpenAI
-    type: select
-    proxies:
-      - 🇺🇸 美国
-      - 🐶 日本
-      - 🇸🇬 新加坡
-      - 🚀 节点选择
-
-  - name: 📱 电报信息
-    type: select
-    proxies:
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🚀 节点选择
-
-  - name: 🎮 游戏服务
-    type: select
-    proxies:
-      - 🕳 全球直连
-      - 🚀 节点选择
-
-  - name: 💰 PayPal
-    type: select
-    proxies:
-      - 🕳 全球直连
-      - 🚀 节点选择
-
-  - name: 📽 国外媒体
-    type: select
-    proxies:
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🚀 节点选择
-      - 🕳 全球直连
-
-  - name: 🆎 AdBlock
-    type: select
-    proxies:
-      - REJECT
-      - 🕳 全球直连
-      - 🚀 节点选择
-
-  - name: 📽自建emby
-    type: select
-    proxies:
-      - REJECT
-      - 🏍️ emby
-
-  # - name: 📡 故障转移
-  #   type: fallback         #通过httping URL 当没有ping值时 按顺序自动切换下一个节点
-  #   proxies: # 按顺序优先级填写
-  #     - 🇭🇰 香港
-  #     - 🇺🇸 美国
-  #     - 🇨🇳 台湾
-  #     - 🚀 节点选择
-
-  - name: 📹 YouTube Premium
-    type: select
-    proxies:
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🚀 节点选择
-
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🕳 全球直连
-
-  - name: ☁️ cloudflare
-    type: select
-    proxies:
-      - 🏍️ 自动选择
-      - 🇺🇸 美国
-      - 🐶 日本
-      - 🇬🇧 英国
-      - 🇸🇬 新加坡
-      - 🕳 全球直连
-
-  - name: 🐳 Docker
-    type: select
-    proxies:
-      - 🏍️ 自动选择
-      - 🇺🇸 美国
-      - 🐶 日本
-      - 🇬🇧 英国
-      - 🇸🇬 新加坡
-      - 🕳 全球直连
-
-  - name: Proxy
-    type: select
-    proxies:
-      - 🏍️ 自动选择
-      - 🇺🇸 美国
-      - 🐶 日本
-      - 🇬🇧 英国
-      - 🇸🇬 新加坡
-      - 🕳 全球直连
-
-# 规则地址
-rule-providers:
-  LocalAreaNetwork: # Provider 名称
-    type: http
-    behavior: classical # domain, ipcidr or classical (premium core only)
-    path: ./rule_provider/LocalAreaNetwork.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Lan/Lan.yaml
-    interval: 86400
-
-  UnBan:
-    type: http
-    behavior: classical
-    path: ./rule_provider/UnBan.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Direct/Direct.yaml
-    interval: 86400
-
-  NTP-Service:
-    type: http
-    behavior: classical
-    path: ./rule_provider/NTP-Service
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/NTPService/NTPService.yaml
-    interval: 86400
-    
-  youtube:
-    type: http
-    behavior: classical
-    path: ./rule_provider/youtube.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/YouTube/YouTube.yaml
-    interval: 86400
-    
-  youtubemusic:
-    type: http
-    behavior: classical
-    path: ./rule_provider/youtubemusic.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml
-    interval: 86400
-    
-  PayPal:
-    type: http
-    behavior: classical
-    path: ./rule_provider/PayPal.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/PayPal/PayPal.yaml
-    interval: 86400
-
-  zhihu:
-    type: http
-    behavior: classical
-    path: ./rule_provider/zhihu.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/ZhihuAds/ZhihuAds.yaml
-    interval: 86400
-
-  Advertising:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Advertising.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Advertising/Advertising_Classical.yaml
-    interval: 86400
-    
-  OneDrive:
-    type: http
-    behavior: classical
-    path: ./rule_provider/OneDrive.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/OneDrive/OneDrive.yaml
-    interval: 86400
-
-  Microsoft:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Microsoft.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Microsoft/Microsoft.yaml
-    interval: 86400
-    
-  Apple:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Apple.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Apple/Apple.yaml
-    interval: 86400
-
-  Telegram:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Telegram.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Telegram/Telegram.yaml
-    interval: 86400
-    
-  GlobalMedia:
-    type: http
-    behavior: classical
-    path: ./rule_provider/GlobalMedia.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml
-    interval: 86400
-    
-  PrivateTracker:
-    type: http
-    behavior: classical
-    path: ./rule_provider/PrivateTracker.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/PrivateTracker/PrivateTracker.yaml
-    interval: 86400
-    
-  Game:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Game.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Game/Game.yaml
-    interval: 86400
-    
-  PROXY:
-    type: http
-    behavior: classical
-    path: ./rule_provider/PROXY.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Proxy/Proxy_Classical.yaml
-    interval: 86400
-    
-  CloudCN:
-    type: http
-    behavior: classical
-    path: ./rule_provider/CloudCN.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Cloud/CloudCN/CloudCN.yaml
-    interval: 86400
-    
-  ChinaMax:
-    type: http
-    behavior: classical
-    path: ./rule_provider/ChinaMax.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml
-    interval: 86400
-  
-  OpenAI:
-    type: http
-    behavior: classical
-    path: ./rule_provider/OpenAI.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/OpenAI/OpenAI.yaml
-    interval: 86400
-
-  Figma:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Figma.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Figma/Figma.yaml
-    interval: 86400
-
-  Claude:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Claude.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Claude/Claude.yaml
-    interval: 86400
-  
-  Docker:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Docker.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Docker/Docker.yaml
-    interval: 86400
-
-  Cloudflare:
-    type: http
-    behavior: classical
-    path: ./rules/Cloudflare.list
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.list
-    interval: 86400
-
-  Tencent:
-    type: http
-    behavior: classical
-    path: ./rule_provider/Tencent.yaml
-    url: http://gitlab.entertang.work/clash/ios_scripts_rule/-/raw/master/rule/Clash/Tencent/Tencent.yaml
-    interval: 86400
-
-# 规则
 rules:
-  - PROCESS-NAME,v2ray,DIRECT
-  - PROCESS-NAME,xray,DIRECT
-  - PROCESS-NAME,naive,DIRECT
-  - PROCESS-NAME,trojan,DIRECT
-  - PROCESS-NAME,trojan-go,DIRECT
-  - PROCESS-NAME,ss-local,DIRECT
-  - PROCESS-NAME,privoxy,DIRECT
-  - PROCESS-NAME,leaf,DIRECT
-  - PROCESS-NAME,v2ray.exe,DIRECT
-  - PROCESS-NAME,xray.exe,DIRECT
-  - PROCESS-NAME,naive.exe,DIRECT
-  - PROCESS-NAME,trojan.exe,DIRECT
-  - PROCESS-NAME,trojan-go.exe,DIRECT
-  - PROCESS-NAME,ss-local.exe,DIRECT
-  - PROCESS-NAME,privoxy.exe,DIRECT
-  - PROCESS-NAME,leaf.exe,DIRECT
-  - PROCESS-NAME,Surge,DIRECT
-  - PROCESS-NAME,Surge 2,DIRECT
-  - PROCESS-NAME,Surge 3,DIRECT
-  - PROCESS-NAME,Surge 4,DIRECT
-  - PROCESS-NAME,Surge%202,DIRECT
-  - PROCESS-NAME,Surge%203,DIRECT
-  - PROCESS-NAME,Surge%204,DIRECT
-  - PROCESS-NAME,Thunder,DIRECT
-  - PROCESS-NAME,DownloadService,DIRECT
-  - PROCESS-NAME,qBittorrent,DIRECT
-  - PROCESS-NAME,Transmission,DIRECT
-  - PROCESS-NAME,fdm,DIRECT
-  - PROCESS-NAME,aria2c,DIRECT
-  - PROCESS-NAME,Folx,DIRECT
-  - PROCESS-NAME,NetTransport,DIRECT
-  - PROCESS-NAME,uTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent,DIRECT
-  - PROCESS-NAME,aria2c.exe,DIRECT
-  - PROCESS-NAME,BitComet.exe,DIRECT
-  - PROCESS-NAME,fdm.exe,DIRECT
-  - PROCESS-NAME,NetTransport.exe,DIRECT
-  - PROCESS-NAME,qbittorrent.exe,DIRECT
-  - PROCESS-NAME,Thunder.exe,DIRECT
-  - PROCESS-NAME,ThunderVIP.exe,DIRECT
-  - PROCESS-NAME,transmission-daemon.exe,DIRECT
-  - PROCESS-NAME,transmission-qt.exe,DIRECT
-  - PROCESS-NAME,uTorrent.exe,DIRECT
-  - PROCESS-NAME,WebTorrent.exe,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-# 这些是自定义规则，想要的可以继续加
-  - DOMAIN-SUFFIX,tongji.baidu.com,DIRECT
-  - DOMAIN-SUFFIX,click.simba.taobao.com,DIRECT
-  - DOMAIN-SUFFIX,behance.net,🇺🇸 美国
-  - DOMAIN-SUFFIX,figma.com,DIRECT
-  - DOMAIN-SUFFIX,entertang.com,DIRECT
-  - DOMAIN-SUFFIX,entertang.work,DIRECT
-  - DOMAIN-SUFFIX,chatgpt.com, 🇺🇸 美国
-  - DOMAIN-SUFFIX,v2ex.com,🇸🇬 新加坡
   - DOMAIN-SUFFIX,stream1.misakaf.org,🏍️ emby
   - DOMAIN-SUFFIX,stream2.misakaf.org,🏍️ emby
   - DOMAIN-SUFFIX,stream3.misakaf.org,🏍️ emby
   - DOMAIN-SUFFIX,emby.misakaf.org,🏍️ emby
-#  - DOMAIN-SUFFIX,freenom.com,🚀 节点选择
-#  - DOMAIN-SUFFIX,line.games,🎮 游戏服务
-#  - DOMAIN-SUFFIX,gameguard.co.kr,🎮 游戏服务
-# 下面的规则是通过上面的rule-provider来确定的
-  # - RULE-SET,AAA-daili,🚀 节点选择
-  - RULE-SET,LocalAreaNetwork,🕳 全球直连
-  - RULE-SET,Tencent,🕳 全球直连
-  - RULE-SET,NTP-Service,🕳 全球直连
-  - RULE-SET,Apple,🕳 全球直连
-  - RULE-SET,PayPal,💰 PayPal
-  - RULE-SET,OpenAI,🇺🇸 美国
-  - RULE-SET,Claude,🇺🇸 美国
-  - RULE-SET,Docker,🐳 Docker
-  - RULE-SET,PROXY,Proxy
-  - RULE-SET,Advertising,🆎 AdBlock
-  - RULE-SET,youtube,📹 YouTube Premium
-  - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,Telegram,📱 电报信息
-  - RULE-SET,GlobalMedia,📽 国外媒体
-  - RULE-SET,PrivateTracker,🕳 全球直连
-  - RULE-SET,CloudCN,🕳 全球直连
-  - RULE-SET,ChinaMax,🕳 全球直连
-  - RULE-SET,Cloudflare,☁️ cloudflare
-  - GEOIP,CN,DIRECT
-  - MATCH,🐟 漏网之鱼
+  - DOMAIN-SUFFIX,emby.aca.best,🏍️ emby
+  - DOMAIN-SUFFIX,porn.aca.best,🏍️ emby
+  - RULE-SET,private_ip,直连,no-resolve
+  - RULE-SET,github_domain,Github
+  - RULE-SET,twitter_domain,Twitter
+  - RULE-SET,youtube_domain,YouTube
+  - RULE-SET,google_domain,Google
+  - RULE-SET,telegram_domain,Telegram
+  - RULE-SET,cn_domain,国内
+  - RULE-SET,openai_domain,OpenAI
+  - RULE-SET,microsoft_domain,Microsoft
+  - RULE-SET,geolocation-!cn,其他
+  - RULE-SET,gfw_domain,其他  
+
+  - RULE-SET,google_ip,Google
+  - RULE-SET,telegram_ip,Telegram
+  - RULE-SET,twitter_ip,Twitter
+  - RULE-SET,cn_ip,国内
+  - MATCH,其他
+
+  - GEOIP,lan,直连,no-resolve
+  - GEOSITE,github,Github
+  - GEOSITE,twitter,Twitter
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,google,Google
+  - GEOSITE,telegram,Telegram
+  - GEOSITE,CN,国内
+  - GEOSITE,geolocation-!cn,其他
+
+  - GEOIP,google,Google
+  - GEOIP,telegram,Telegram
+  - GEOIP,twitter,Twitter
+  - GEOIP,CN,国内
+
+rule-anchor:
+  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: text}
+  domain: &domain {type: http, interval: 86400, behavior: domain, format: text}
+rule-providers:
+  private_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.list"
+  cn_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.list"
+  github_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.list"
+  twitter_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.list"
+  youtube_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.list"
+  google_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.list"
+  telegram_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.list"
+  openai_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.list"    
+  microsoft_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.list"      
+  geolocation-!cn:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.list"
+  gfw_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.list"         
+
+  private_ip:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.list"
+  cn_ip:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.list"
+  google_ip:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.list"
+  netflix_ip:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.list"
+  twitter_ip:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.list"
+  telegram_ip:
+    <<: *ip
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
