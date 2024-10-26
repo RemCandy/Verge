@@ -296,10 +296,6 @@ proxy-groups:
     type: select
     proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
 
-  - name: 国内
-    type: select
-    proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
-
   - name: 其他
     type: select
     proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
