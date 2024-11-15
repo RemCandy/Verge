@@ -1,12 +1,41 @@
 # url 里填写自己的订阅,名称不能重复
 proxy-providers:
-  subhub_all:
-    url: "https://subhub.153561999.xyz/2cXaAxRGfddmGz2yx1wAtet/download/collection/fantistiac"
+  kuli:
+    url: "https://dingyue888.shop/link/Agvyw3UgXILrEBva?clash=1"
     type: http
     interval: 86400
-    path: ./subhub_all.yaml
+    path: ./kuli.yaml
     health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
-  
+  aca:
+    url: "https://dadada.acaisbest.com/api/v1/client/subscribe?token=9f1ca63122dc9d3c647c4c06022455d5"
+    type: http
+    interval: 86400
+    path: ./aca.yaml
+    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
+  cloudflare_us:
+    url: "https://dingyue21.15356199.xyz"
+    type: http
+    interval: 86400
+    path: ./cloudflare_us.yaml
+    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
+  cloudflare_jp101:
+    url: "https://dingyue101.15356199.xyz"
+    type: http
+    interval: 86400
+    path: ./cloudflare_jp101.yaml
+    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
+  cloudflare_jp222:
+    url: "https://dingyue222.15356199.xyz"
+    type: http
+    interval: 86400
+    path: ./cloudflare_jp222.yaml
+    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
+  pokemon:
+    url: "https://link02.pikachucloud.site/api/v1/client/subscribe?token=1e86aee55af2c45e71cae17cf5bd6806"
+    type: http
+    interval: 86400
+    path: ./pokemon.yaml
+    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
     
 proxies: 
   - name: "直连"
