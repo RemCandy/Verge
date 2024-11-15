@@ -266,7 +266,7 @@ proxy-groups:
 
   - name: 默认
     type: select
-    proxies: [自动选择,nerd,香港,台湾,日本,新加坡,美国,全部节点,直连]
+    proxies: [自动选择,nerd,香港,台湾,日本,新加坡,美国,全部节点]
 
   - name: Google
     type: select
@@ -282,11 +282,11 @@ proxy-groups:
 
   - name: YouTube
     type: select
-    proxies: [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies: [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
   - name: Github
     type: select
-    proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
   - name: OpenAI
     type: select
@@ -294,15 +294,15 @@ proxy-groups:
 
   - name: Microsoft
     type: select
-    proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
   - name: 国内
     type: select
-    proxies:  [直连,默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+    proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
   - name: 其他
     type: select
-    proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies:  [默认,nerd,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
 
   #分隔,下面是地区分组
@@ -386,7 +386,6 @@ rules:
   - DOMAIN-SUFFIX,emby.misakaf.org,🏍️ emby
   - DOMAIN-SUFFIX,emby.aca.best,🏍️ emby
   - DOMAIN-SUFFIX,porn.aca.best,🏍️ emby
-  - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,github_domain,Github
   - RULE-SET,twitter_domain,Twitter
   - RULE-SET,youtube_domain,YouTube
@@ -404,7 +403,6 @@ rules:
   - RULE-SET,cn_ip,国内
   - MATCH,其他
 
-  - GEOIP,lan,直连,no-resolve
   - GEOSITE,github,Github
   - GEOSITE,twitter,Twitter
   - GEOSITE,youtube,YouTube
