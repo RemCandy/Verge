@@ -87,13 +87,13 @@ dns:
       - "https://dns.google/dns-query"
 
 proxy-groups:
-  - name: cloudflare_mix
-    type: select
-    proxies: [cloudflare_sg,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2]
-
   - name: 默认
     type: select
     proxies: [自动选择,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,直连]
+
+  - name: cloudflare_mix
+    type: select
+    proxies: [cloudflare_sg,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2]
 
   - name: Google
     type: select
