@@ -87,46 +87,49 @@ dns:
       - "https://dns.google/dns-query"
 
 proxy-groups:
+  - name: cloudflare_mix
+    type: select
+    proxies: [cloudflare_sg,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2]
 
   - name: 默认
     type: select
-    proxies: [自动选择,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,香港,台湾,日本,新加坡,美国,全部节点,直连]
+    proxies: [自动选择,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,直连]
 
   - name: Google
     type: select
-    proxies: [默认,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+    proxies: [默认,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
   - name: Telegram
     type: select
-    proxies: [默认,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+    proxies: [默认,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
   - name: Twitter
     type: select
-    proxies: [默认,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+    proxies: [默认,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
   - name: YouTube
     type: select
-    proxies: [默认,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies: [默认,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
 
   - name: Github
     type: select
-    proxies:  [默认,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies:  [默认,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
 
   - name: OpenAI
     type: select
-    proxies:  [默认,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,台湾,日本,新加坡,美国]
+    proxies:  [默认,cloudflare_mix,台湾,日本,新加坡,美国]
 
   - name: Microsoft
     type: select
-    proxies:  [默认,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies:  [默认,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
 
   - name: 国内
     type: select
-    proxies:  [直连,默认,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+    proxies:  [直连,默认,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
 
   - name: 其他
     type: select
-    proxies:  [默认,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies:  [默认,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
 
 
   #分隔,下面是地区分组
@@ -203,6 +206,14 @@ proxy-groups:
     type: select
     include-all-providers: true
     filter: "jp2-cf"
+    url: 'http://www.apple.com/library/test/success.html'
+    interval: 300
+    tolerance: 50
+
+  - name: cloudflare_sg
+    type: select
+    include-all-providers: true
+    filter: "sg_cf"
     url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
