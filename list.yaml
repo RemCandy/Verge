@@ -6,6 +6,18 @@ proxy-providers:
     interval: 86400
     path: ./banana.yaml
     health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
+  great80s:
+    url: "https://subhub.153561999.xyz/2cXaAxRGfddmGz2yx1wAtet/download/collection/great80s"
+    type: http
+    interval: 86400
+    path: ./great80s.yaml
+    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
+  suball:
+    type: http
+    url: "https://subhub.153561999.xyz/2cXaAxRGfddmGz2yx1wAtet/download/collection/fantistiac?target=ClashMeta"
+    interval: 86400
+    path: ./suball.yaml
+    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
  
 proxies: 
   - name: "直连"
