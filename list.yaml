@@ -87,13 +87,13 @@ dns:
       - "https://dns.google/dns-query"
 
 proxy-groups:
-  - name: 默认
-    type: select
-    proxies: [自动选择,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,直连]
-
   - name: cloudflare_mix
     type: select
     proxies: [cloudflare_sg,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2]
+
+  - name: 默认
+    type: select
+    proxies: [自动选择,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,直连]
 
   - name: Google
     type: select
@@ -106,6 +106,10 @@ proxy-groups:
   - name: Twitter
     type: select
     proxies: [默认,cloudflare_mix,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+  
+  - name: StreamMedia
+    type: select
+    proxies: [新加坡,🏍️ emby]
 
   - name: YouTube
     type: select
@@ -221,7 +225,7 @@ proxy-groups:
   - name: 🏍️ emby
     type: url-test
     include-all-providers: true
-    filter: "Emby"
+    filter: "Emby|netflix"
     url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
@@ -250,6 +254,7 @@ rules:
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,github_domain,Github
   - RULE-SET,twitter_domain,Twitter
+  - RULE-SET,netflix_domain,StreamMedia 
   - RULE-SET,youtube_domain,YouTube
   - RULE-SET,google_domain,Google
   - RULE-SET,telegram_domain,Telegram
@@ -262,6 +267,7 @@ rules:
   - RULE-SET,google_ip,Google
   - RULE-SET,telegram_ip,Telegram
   - RULE-SET,twitter_ip,Twitter
+  - RULE-SET,netflix_ip,StreamMedia
   - RULE-SET,cn_ip,国内
   - MATCH,其他
 
@@ -277,6 +283,7 @@ rules:
   - GEOIP,google,Google
   - GEOIP,telegram,Telegram
   - GEOIP,twitter,Twitter
+  - GEOIP,NETFLIX,StreamMedia
   - GEOIP,CN,国内
 
 rule-anchor:
@@ -295,6 +302,9 @@ rule-providers:
   twitter_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.list"
+  netflix_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.list"
   youtube_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.list"
