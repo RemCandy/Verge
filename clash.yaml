@@ -1,11 +1,5 @@
 # url 里填写自己的订阅,名称不能重复
 proxy-providers:
-  kuli:
-    url: "https://dingyue888.shop/link/Agvyw3UgXILrEBva?clash=1"
-    type: http
-    interval: 86400
-    path: ./kuli.yaml
-    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
   aca:
     url: "https://dadada.acaisbest.com/api/v1/client/subscribe?token=9f1ca63122dc9d3c647c4c06022455d5"
     type: http
