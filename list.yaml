@@ -98,10 +98,11 @@ dns:
       - "https://dns.cloudflare.com/dns-query"
       - "https://dns.google/dns-query"
 
+
 proxy-groups:
   - name: cloudflare_mix
     type: select
-    proxies: [cloudflare_sg,cloudflare_us1,cloudflare_us2,cloudflare_jp1,cloudflare_jp2]
+    proxies: [cloudflare_us2,cloudflare_jp1,cloudflare_jp2]
 
   - name: 默认
     type: select
@@ -194,13 +195,13 @@ proxy-groups:
     tolerance: 50
     #lazy: true    
 
-  - name: cloudflare_us1
-    type: select
-    include-all-providers: true
-    filter: "us-cf"
-    url: 'http://www.apple.com/library/test/success.html'
-    interval: 300
-    tolerance: 50
+  # - name: cloudflare_us1
+  #   type: select
+  #   include-all-providers: true
+  #   filter: "us-cf"
+  #   url: 'http://www.apple.com/library/test/success.html'
+  #   interval: 300
+  #   tolerance: 50
 
   - name: cloudflare_us2
     type: select
@@ -226,13 +227,13 @@ proxy-groups:
     interval: 300
     tolerance: 50
 
-  - name: cloudflare_sg
-    type: select
-    include-all-providers: true
-    filter: "sg_cf"
-    url: 'http://www.apple.com/library/test/success.html'
-    interval: 300
-    tolerance: 50
+  # - name: cloudflare_sg
+  #   type: select
+  #   include-all-providers: true
+  #   filter: "sg_cf"
+  #   url: 'http://www.apple.com/library/test/success.html'
+  #   interval: 300
+  #   tolerance: 50
 
   - name: 🏍️ emby
     type: url-test
@@ -357,3 +358,4 @@ rule-providers:
   telegram_ip:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
+
