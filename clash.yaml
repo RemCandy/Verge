@@ -1,10 +1,10 @@
 # url 里填写自己的订阅,名称不能重复
 proxy-providers:
-  subhub:
+  subhub_all:
     url: "https://subhub.153561999.xyz/wakawakaee/download/collection/fantistiac"
     type: http
     interval: 86400
-    path: ./subhub.yaml
+    path: ./subhub_all.yaml
     health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
   kuli:
     url: "https://dingyue888.shop/link/Agvyw3UgXILrEBva?clash=1"
