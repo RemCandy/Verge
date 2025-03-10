@@ -7,7 +7,7 @@ proxy-providers:
     path: ./subhub_all.yaml
     health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
   kuli:
-    url: "https://one.miaoclash.ddns-ip.net/cm?clash"
+    url: "https://sky.miaoclash.ddns-ip.net/cnm?clash"
     type: http
     interval: 86400
     path: ./kuli.yaml
