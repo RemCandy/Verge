@@ -1,7 +1,7 @@
 # url 里填写自己的订阅,名称不能重复
 proxy-providers:
   subhub_all:
-    url: "https://subhub.153561999.xyz/wakawakaee/download/collection/fantistiac"
+    url: "https://subhub.153561999.xyz/wakawakaee/download/collection/all"
     type: http
     interval: 86400
     path: ./subhub_all.yaml
