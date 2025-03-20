@@ -1,5 +1,11 @@
 # url 里填写自己的订阅,名称不能重复
 proxy-providers:
+  suball:
+    type: http
+    url: "https://subhub.153561999.xyz/wakawakaee/download/collection/all"
+    interval: 86400
+    path: ./suball.yaml
+    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
   banana:
     type: http
     url: "https://subhub.153561999.xyz/wakawakaee/download/collection/banana"
@@ -11,12 +17,6 @@ proxy-providers:
     type: http
     interval: 86400
     path: ./great80s.yaml
-    health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
-  suball:
-    type: http
-    url: "https://subhub.153561999.xyz/wakawakaee/download/collection/all"
-    interval: 86400
-    path: ./suball.yaml
     health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
  
 proxies: 
