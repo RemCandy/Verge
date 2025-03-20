@@ -265,6 +265,8 @@ rules:
   - DOMAIN-SUFFIX,emby.aca.best,🏍️ emby
   - DOMAIN-SUFFIX,porn.aca.best,🏍️ emby
   - RULE-SET,private_ip,直连,no-resolve
+  - RULE-SET,115_domian,国内
+  - RULE-SET,pikpak_domain,下载
   - RULE-SET,github_domain,Github
   - RULE-SET,twitter_domain,Twitter
   - RULE-SET,netflix_domain,StreamMedia 
@@ -275,7 +277,7 @@ rules:
   - RULE-SET,openai_domain,OpenAI
   - RULE-SET,microsoft_domain,Microsoft
   - RULE-SET,geolocation-!cn,其他
-  - RULE-SET,gfw_domain,其他  
+  - RULE-SET,gfw_domain,其他 
 
   - RULE-SET,google_ip,Google
   - RULE-SET,telegram_ip,Telegram
@@ -338,7 +340,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.list"
   gfw_domain:
     <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.list"         
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.list"
+  pikpak_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/pikpak.list"   
+  115_domian:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/115.list"
 
   private_ip:
     <<: *ip
@@ -358,4 +366,3 @@ rule-providers:
   telegram_ip:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
-
