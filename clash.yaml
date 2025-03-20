@@ -111,50 +111,61 @@ dns:
       - "https://dns.google/dns-query"
 
 proxy-groups:
+  - name: cloudflare_mix
+    type: select
+    proxies: [cloudflare_us2,cloudflare_jp1,cloudflare_jp2]
 
   - name: 默认
     type: select
-    proxies: [自动选择,香港,台湾,日本,新加坡,美国,全部节点,直连]
+    proxies: [自动选择,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,直连]
 
   - name: Google
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+    proxies: [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
 
   - name: Telegram
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+    proxies: [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
 
   - name: Twitter
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+    proxies: [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
+  
+  - name: StreamMedia
+    type: select
+    proxies: [🇸🇬新加坡,🏍️ emby]
 
   - name: YouTube
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies: [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
 
   - name: Github
     type: select
-    proxies:  [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies:  [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
 
   - name: OpenAI
     type: select
-    proxies:  [默认,台湾,日本,新加坡,美国]
+    proxies:  [默认,cloudflare_mix,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国]
 
   - name: Microsoft
     type: select
-    proxies:  [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies:  [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
 
   - name: 国内
     type: select
-    proxies:  [直连,默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择]
+    proxies:  [直连,默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
+
+  - name: 下载
+    type: select
+    proxies: [直连,默认,bestsub]
 
   - name: 其他
     type: select
-    proxies:  [默认,香港,台湾,日本,新加坡,美国,全部节点,自动选择,直连]
+    proxies:  [默认,cloudflare_mix,bestsub,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
 
 
   #分隔,下面是地区分组
-  - name: 香港
+  - name: 🇭🇰香港
     type: url-test
     include-all-providers: true
     filter: "(?i)港|hk|hongkong|hong kong"
@@ -163,7 +174,7 @@ proxy-groups:
     tolerance: 50
     #lazy: true
           
-  - name: 台湾
+  - name: 🇨🇳台湾
     type: url-test
     include-all-providers: true
     filter: "(?i)台|tw|taiwan"
@@ -172,7 +183,7 @@ proxy-groups:
     tolerance: 50
     #lazy: true    
 
-  - name: 日本
+  - name: 🇯🇵日本
     type: url-test
     include-all-providers: true
     filter: "(?i)日本|jp|japan"
@@ -181,7 +192,7 @@ proxy-groups:
     tolerance: 50
     #lazy: true    
 
-  - name: 美国
+  - name: 🇺🇸美国
     type: url-test
     include-all-providers: true
     filter: "(?i)美|us|unitedstates|united states"
@@ -190,7 +201,7 @@ proxy-groups:
     tolerance: 50
     #lazy: true    
 
-  - name: 新加坡
+  - name: 🇸🇬新加坡
     type: url-test
     include-all-providers: true
     filter: "(?i)(新|sg|singapore)"
@@ -198,11 +209,59 @@ proxy-groups:
     interval: 300
     tolerance: 50
     #lazy: true    
+
+  # - name: cloudflare_us1
+  #   type: select
+  #   include-all-providers: true
+  #   filter: "us-cf"
+  #   url: 'http://www.apple.com/library/test/success.html'
+  #   interval: 300
+  #   tolerance: 50
+
+  - name: cloudflare_us2
+    type: select
+    include-all-providers: true
+    filter: "us2-cf"
+    url: 'http://www.apple.com/library/test/success.html'
+    interval: 300
+    tolerance: 50
+
+  - name: cloudflare_jp1
+    type: select
+    include-all-providers: true
+    filter: "cf-jp"
+    url: 'http://www.apple.com/library/test/success.html'
+    interval: 300
+    tolerance: 50
+
+  - name: cloudflare_jp2
+    type: select
+    include-all-providers: true
+    filter: "jp2-cf"
+    url: 'http://www.apple.com/library/test/success.html'
+    interval: 300
+    tolerance: 50
   
+  - name: bestsub
+    type: select
+    include-all-providers: true
+    filter: "MB"
+    url: 'http://www.apple.com/library/test/success.html'
+    interval: 300
+    tolerance: 50
+
+  # - name: cloudflare_sg
+  #   type: select
+  #   include-all-providers: true
+  #   filter: "sg_cf"
+  #   url: 'http://www.apple.com/library/test/success.html'
+  #   interval: 300
+  #   tolerance: 50
+
   - name: 🏍️ emby
     type: url-test
     include-all-providers: true
-    filter: "Emby"
+    filter: "Emby|netflix"
     url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
@@ -211,10 +270,12 @@ proxy-groups:
   - name: 全部节点
     type: select
     include-all: true
+    exclude-filter: 直连
 
   - name: 自动选择
     type: url-test
     include-all: true
+    exclude-filter: 直连
     url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 10
@@ -328,4 +389,3 @@ rule-providers:
   telegram_ip:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
-
