@@ -1,0 +1,36 @@
+name: Update From Gist
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每日UTC 0点执行
+  workflow_dispatch:      # 允许手动触发
+
+jobs:
+  sync-gist:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Fetch Gist Content
+      id: fetch-gist
+      env:
+        GIST_ID: ${{ secrets.GIST_ID }}  # 替换实际Gist ID
+      run: |
+        # 获取指定文件内容
+        response=$(curl -s "https://gist.githubusercontent.com/aFleurdelys/$GIST_ID/raw/mihomo.yaml")
+
+        # 写入目标文件
+        echo "$response" > Sub
+
+    - name: Commit Changes
+      run: |
+        if git diff --quiet; then
+          echo "No changes detected"
+        else
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add Sub
+          git commit -m "The servers have been updated✔ - $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')"
+          git push
+        fi
