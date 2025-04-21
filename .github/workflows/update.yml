@@ -25,11 +25,12 @@ jobs:
 
     - name: Commit Changes
       run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        
         if git diff --quiet; then
           echo "No changes detected"
         else
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
           git add Sub
           git commit -m "The servers have been updated✔ - $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')"
           git push
