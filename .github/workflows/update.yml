@@ -2,7 +2,7 @@ name: sync-gist
 
 on:
   schedule:
-    - cron: '0/10 0 * * *'  # 每日UTC 0点执行
+    - cron: '0 0/2 * * *'  # 每日UTC 0点执行
   workflow_dispatch:      # 允许手动触发
 
 jobs:
