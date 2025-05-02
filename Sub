@@ -1518,7 +1518,7 @@ proxy-groups:
     type: select
 
 defaults:
-  domain: &domain { path: ./rules/*, behavior: domain, interval: 86400, type: http,  format: text }
+  domain: &domain { behavior: domain, interval: 86400, type: http,  format: text }
 rule-providers:
   LocalAreaNetwork:
     <<: *domain
