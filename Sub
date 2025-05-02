@@ -1517,9 +1517,8 @@ proxy-groups:
     filter: (?i)NF|奈飞|解锁|Netflix|NETFLIX|Media
     type: select
 
-
 defaults:
-  domain: &domain { path: ./rules/, behavior: domain, interval: 86400, type: http,  format: text }
+  domain: &domain { path: ./rules/*, behavior: domain, interval: 86400, type: http,  format: text }
 rule-providers:
   LocalAreaNetwork:
     <<: *domain
