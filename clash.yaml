@@ -18,7 +18,7 @@ proxy-providers:
     interval: 86400
     path: ./great80s.yaml
     health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
- 
+
 proxies: 
   - name: "直连"
     type: direct
@@ -99,25 +99,25 @@ dns:
       - "https://dns.google/dns-query"
 
 proxy-groups:
-  - name: cloudflare_mix
+  - name: 自建节点
     type: select
-    proxies: [cloudflare_us2,cloudflare_jp1,cloudflare_jp2]
+    proxies: [claw_nb,ksco_direct,ksco_sub]
 
   - name: 默认
     type: select
-    proxies: [自动选择,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,直连]
+    proxies: [自动选择,自建节点,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,直连]
 
   - name: Google
     type: select
-    proxies: [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
+    proxies: [默认,自建节点,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
 
   - name: Telegram
     type: select
-    proxies: [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
+    proxies: [默认,自建节点,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
 
   - name: Twitter
     type: select
-    proxies: [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
+    proxies: [默认,自建节点,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
   
   - name: StreamMedia
     type: select
@@ -125,31 +125,31 @@ proxy-groups:
 
   - name: YouTube
     type: select
-    proxies: [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
+    proxies: [默认,自建节点,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
 
   - name: Github
     type: select
-    proxies:  [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
+    proxies:  [默认,自建节点,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
 
   - name: OpenAI
     type: select
-    proxies:  [默认,cloudflare_mix,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国]
+    proxies:  [默认,自建节点,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国]
 
   - name: Microsoft
     type: select
-    proxies:  [默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
+    proxies:  [默认,自建节点,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
 
   - name: 国内
     type: select
-    proxies:  [直连,默认,cloudflare_mix,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
+    proxies:  [直连,默认,自建节点,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择]
 
   - name: 下载
     type: select
-    proxies: [直连,默认,bestsub]
+    proxies: [直连,默认,bestsub,自建节点]
 
   - name: 其他
     type: select
-    proxies:  [默认,cloudflare_mix,bestsub,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
+    proxies:  [默认,自建节点,bestsub,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇸🇬新加坡,🇺🇸美国,全部节点,自动选择,直连]
 
 
   #分隔,下面是地区分组
@@ -198,34 +198,26 @@ proxy-groups:
     tolerance: 50
     #lazy: true    
 
-  # - name: cloudflare_us1
-  #   type: select
-  #   include-all-providers: true
-  #   filter: "us-cf"
-  #   url: 'http://www.apple.com/library/test/success.html'
-  #   interval: 300
-  #   tolerance: 50
-
-  - name: cloudflare_us2
+  - name: claw_nb
     type: select
     include-all-providers: true
-    filter: "us2-cf"
+    filter: "(?i)(claw1|claw2|CNFaster|netcup|iij)"
     url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
 
-  - name: cloudflare_jp1
+  - name: ksco_sub
     type: select
     include-all-providers: true
-    filter: "cf-jp"
+    filter: "(?i)(blackbird)"
     url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
 
-  - name: cloudflare_jp2
+  - name: ksco_direct
     type: select
     include-all-providers: true
-    filter: "jp2-cf"
+    filter: "(?i)(kscodirect)"
     url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
@@ -237,14 +229,6 @@ proxy-groups:
     url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
-
-  # - name: cloudflare_sg
-  #   type: select
-  #   include-all-providers: true
-  #   filter: "sg_cf"
-  #   url: 'http://www.apple.com/library/test/success.html'
-  #   interval: 300
-  #   tolerance: 50
 
   - name: 🏍️ emby
     type: url-test
@@ -284,6 +268,7 @@ rules:
   - RULE-SET,youtube_domain,YouTube
   - RULE-SET,google_domain,Google
   - RULE-SET,telegram_domain,Telegram
+  - RULE-SET,docker_domain,下载
   - RULE-SET,cn_domain,国内
   - RULE-SET,openai_domain,OpenAI
   - RULE-SET,microsoft_domain,Microsoft
@@ -358,6 +343,9 @@ rule-providers:
   115_domian:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/115.list"
+  docker_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/docker.list"
 
   private_ip:
     <<: *ip
@@ -377,4 +365,4 @@ rule-providers:
   telegram_ip:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
-    
+
