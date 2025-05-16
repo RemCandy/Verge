@@ -1145,6 +1145,14 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  GoogleINTL:
+    url: >-
+      https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.list
+    path: ./ruleset/GoogleINTL.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   SteamCN:
     url: >-
       https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/SteamCN.list
@@ -1331,14 +1339,6 @@ rule-providers:
     url: >-
       https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaCompanyIp.list
     path: ./ruleset/ChinaCompanyIp.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  GoogleINTL:
-    url: >-
-      https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.list
-    path: ./ruleset/GoogleINTL.list
     behavior: classical
     interval: 86400
     format: text
