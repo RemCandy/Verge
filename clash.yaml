@@ -18,7 +18,7 @@ proxy-providers:
     interval: 86400
     path: ./great80s.yaml
     health-check: {enable: true,url: "http://www.apple.com/library/test/success.html",interval: 300}
-
+ 
 proxies: 
   - name: "直连"
     type: direct
@@ -253,14 +253,9 @@ proxy-groups:
     tolerance: 10
 
 rules:
-  - DOMAIN-SUFFIX,stream1.misakaf.org,🏍️ emby
-  - DOMAIN-SUFFIX,stream2.misakaf.org,🏍️ emby
-  - DOMAIN-SUFFIX,stream3.misakaf.org,🏍️ emby
-  - DOMAIN-SUFFIX,emby.misakaf.org,🏍️ emby
-  - DOMAIN-SUFFIX,emby.aca.best,🏍️ emby
-  - DOMAIN-SUFFIX,porn.aca.best,🏍️ emby
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,115_domian,国内
+  - RULE-SET,123_domian,国内
   - RULE-SET,pikpak_domain,下载
   - RULE-SET,github_domain,Github
   - RULE-SET,twitter_domain,Twitter
@@ -343,9 +338,15 @@ rule-providers:
   115_domian:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/115.list"
+  123_domian:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/liubin21/clash_rules/refs/heads/main/123.list"
   docker_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/docker.list"
+  wifi_uk_call:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/iniwex5/tools/refs/heads/main/rules/UK-wifi-call.list"
 
   private_ip:
     <<: *ip
@@ -365,4 +366,3 @@ rule-providers:
   telegram_ip:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
-
