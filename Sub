@@ -1,10 +1,36 @@
 proxies:
+  - country: "\U0001F1E8\U0001F1F3CN"
+    name: "\U0001F1ED\U0001F1F0香港1 | ⬇️ 3.8MB/s"
+    password: RlzoEILU
+    port: 15624
+    server: 36.156.102.124
+    skip-cert-verify: true
+    type: trojan
+    udp: true
   - alterId: 64
     cipher: auto
     country: "\U0001F1E8\U0001F1F3CN"
     h2-opts: {}
     http-opts: {}
-    name: "\U0001F1EF\U0001F1F5日本1 | ⬇️ 4.7MB/s"
+    name: "\U0001F1EF\U0001F1F5日本1 | ⬇️ 5.1MB/s"
+    network: ws
+    port: 1443
+    server: 58.246.138.244
+    skip-cert-verify: true
+    tls: true
+    type: vmess
+    uuid: a6a0d901-67e9-460a-90b5-634c5c4f9782
+    ws-opts:
+      headers:
+        HOST: centos7
+      path: /634c5c4f9782
+    servername: centos7
+  - alterId: 64
+    cipher: auto
+    country: "\U0001F1E8\U0001F1F3CN"
+    h2-opts: {}
+    http-opts: {}
+    name: "\U0001F1EF\U0001F1F5日本2 | ⬇️ 5.9MB/s"
     network: ws
     port: 1443
     server: sslvpn.51job.com
@@ -17,129 +43,129 @@ proxies:
         HOST: centos7
       path: /634c5c4f9782
     servername: centos7
-  - country: "\U0001F1EB\U0001F1F7FR"
-    name: "\U0001F1EB\U0001F1F7法国1 | ⬇️ 1.3MB/s"
-    password: telegram-id-privatevpns
-    port: 22222
-    server: 35.181.42.7
-    sni: trojan.burgerip.co.uk
-    type: trojan
-    udp: true
-  - country: "\U0001F1E8\U0001F1F3CN"
-    name: "\U0001F1FA\U0001F1F8美国1 | ⬇️ 1.6MB/s"
-    password: 5e2f888c-68ef-11ef-96ca-f23c9164ca5d
-    port: 15229
-    server: 13c2c931-swin40-swy6li-tni2.cu.plebai.net
-    skip-cert-verify: true
-    sni: 13c2c931-swin40-swy6li-tni2.cu.plebai.net
-    type: trojan
-    udp: true
-  - country: "\U0001F1E8\U0001F1F3CN"
-    name: "\U0001F1FA\U0001F1F8美国2 | ⬇️ 1.4MB/s"
-    password: 93fb69fc-77cf-11ee-85ee-f23c91369f2d
-    port: 15229
-    server: f1e4e0ee-swin40-t12cnj-1ol97.cu.plebai.net
-    skip-cert-verify: true
-    sni: f1e4e0ee-swin40-t12cnj-1ol97.cu.plebai.net
-    type: trojan
-    udp: true
-  - alterId: 0
-    cipher: auto
-    country: "\U0001F3C1ZZ"
-    h2-opts: {}
-    http-opts: {}
-    name: "\U0001F1FA\U0001F1F8美国3 | ⬇️ 10.3MB/s"
-    network: ws
-    port: 443
-    server: www.visa.com.tw
-    skip-cert-verify: true
-    tls: true
-    type: vmess
-    uuid: 982087ef-8851-44df-eb8e-836f3362f3f1
-    ws-opts:
-      headers:
-        HOST: oracle-sjc.ecp.dpdns.org
-      path: /by-zedware-network/?ed=2560
-    servername: oracle-sjc.ecp.dpdns.org
   - cipher: aes-256-cfb
-    country: "\U0001F1F0\U0001F1F7 KR"
-    name: "\U0001F1F0\U0001F1F7韩国1 | ⬇️ 10.1MB/s"
-    password: qwerREWQ@@
-    port: 15098
-    server: 125.141.31.72
+    country: "\U0001F3C1 ZZ"
+    name: "\U0001F300其他1-VN | ⬇️ 1.0MB/s"
+    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+    port: 38388
+    server: 103.186.154.29
     type: ss
-  - alterId: 0
-    cipher: auto
-    h2-opts: {}
-    http-opts:
-      method: GET
-      path:
-        - /
-    name: "\U0001F1ED\U0001F1F0香港1 | ⬇️ 1.6MB/s"
-    network: http
-    port: 3000
-    server: 18.162.203.189
-    type: vmess
-    udp: true
-    uuid: cc101ff1-3452-41c3-89fe-c2a5a20dc6dc
-  - cipher: aes-256-cfb
-    name: "\U0001F1FA\U0001F1F8美国4 | ⬇️ 2.7MB/s"
-    password: awsps0501
-    port: 443
-    server: 35.91.97.85
-    type: ss
-  - cipher: aes-256-cfb
-    name: "\U0001F1FA\U0001F1F8美国5 | ⬇️ 5.6MB/s"
-    password: awsps0501
-    port: 443
-    server: 35.94.37.62
-    type: ss
-  - alterId: 0
-    cipher: auto
-    h2-opts: {}
-    http-opts: {}
-    name: "\U0001F1FA\U0001F1F8美国6 | ⬇️ 8.7MB/s"
-    network: ws
-    port: 443
-    server: www.visa.com.tw
-    skip-cert-verify: true
-    tls: true
-    type: vmess
-    uuid: 982087ef-8851-44df-eb8e-836f3362f3f1
-    ws-opts:
-      headers:
-        Host: oracle-sjc.ecp.dpdns.org
-      path: /by-zedware-network/?ed=2560
-    servername: www.visa.com.tw
-  - country: "\U0001F1EB\U0001F1F7FR"
-    name: "\U0001F1EB\U0001F1F7法国2 | ⬇️ 5.2MB/s"
-    password: telegram-id-directvpn
-    port: 22223
-    server: 35.181.42.7
-    skip-cert-verify: true
-    sni: trojan.burgerip.co.uk
-    type: trojan
-    udp: true
   - alterId: 0
     cipher: auto
     country: "\U0001F1FA\U0001F1F8US"
     h2-opts: {}
     http-opts: {}
-    name: "\U0001F1F3\U0001F1F1荷兰1 | ⬇️ 2.8MB/s"
+    name: "\U0001F1FA\U0001F1F8美国1 | ⬇️ 4.2MB/s"
     network: ws
-    port: 80
-    server: tiamo1.tiamocloud.us.kg
+    port: 443
+    server: 172.66.168.209
     skip-cert-verify: true
+    tls: true
     type: vmess
-    uuid: 23bb3288-b16b-4f31-b397-8b50f4e236fd
+    uuid: 5428dcc2-9950-4404-b8a5-9dac82acb210
     ws-opts:
       headers:
-        HOST: tiamo1.tiamocloud.us.kg
-        Host: tiamo1.tiamocloud.us.kg
-      path: /
-    servername: tiamo1.tiamocloud.us.kg
+        HOST: maXNEtVIP-usA-VP3.nETKH3.SiTE
+      path: /linkws
+    servername: maXNEtVIP-usA-VP3.nETKH3.SiTE
+  - cipher: aes-256-cfb
+    name: "\U0001F300其他2-VN | ⬇️ 1.7MB/s"
+    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+    port: 38388
+    server: 103.186.155.19
+    type: ss
   - client-fingerprint: chrome
-    name: "\U0001F300其他1-CY | ⬇️ 6.2MB/s"
+    name: "\U0001F1FA\U0001F1F8美国2 | ⬇️ 1.7MB/s"
+    network: ws
+    port: 443
+    server: 104.16.185.163
+    tls: true
+    type: vless
+    udp: true
+    uuid: b0ed6b6c-9606-4be6-bc53-6a32842e26ea
+    ws-opts:
+      headers:
+        Host: vless1.szmanlee.eu.org
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 7.0; SM-J710F Build/NRD90M)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile
+          Safari/537.36
+      path: /
+    xudp: true
+    servername: vless1.szmanlee.eu.org
+  - alpn:
+      - h3
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: "\U0001F1F3\U0001F1F1荷兰1 | ⬇️ 7.2MB/s"
+    network: ws
+    port: 443
+    server: 104.17.147.22
+    tls: true
+    type: vless
+    udp: true
+    uuid: d3541bb4-2cb5-4372-beab-fac34d5b8539
+    ws-opts:
+      headers:
+        Host: 72790032528889957475364702518915.v2line.online
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 7.0; Moto C Build/NRD90M.059)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile
+          Safari/537.36
+      path: /netherlands/amsterdam/vl/ws/tls
+    xudp: true
+    servername: 72790032528889957475364702518915.v2line.online
+  - client-fingerprint: chrome
+    name: "\U0001F1F3\U0001F1F1荷兰2 | ⬇️ 1.5MB/s"
+    network: ws
+    port: 2096
+    server: 104.17.148.22
+    tls: true
+    type: vless
+    udp: true
+    uuid: 838f5273-5d2d-4630-a0f5-9cc8e4aef4d6
+    ws-opts:
+      headers:
+        Host: QiSbUiWg0.ZuMiNhO.InFo
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/63.0.3239.132 Safari/537.36
+      path: /
+    xudp: true
+    servername: QiSbUiWg0.ZuMiNhO.InFo
+  - name: "\U0001F1EB\U0001F1EE芬兰1 | ⬇️ 2.0MB/s"
+    network: ws
+    port: 80
+    server: 135.84.65.11
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/50.0.2661.94 Safari/537.36
+      path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+    xudp: true
+  - client-fingerprint: chrome
+    http-opts:
+      headers: {}
+      path:
+        - /
+    name: "\U0001F1FA\U0001F1F8美国3 | ⬇️ 2.0MB/s"
+    network: tcp
+    port: 443
+    server: 129.159.241.172
+    tls: true
+    type: vless
+    udp: true
+    uuid: 54694a33-a8dc-47dd-bc38-acd3971e0055
+    xudp: true
+    servername: 147135004002.sec20org.com
+  - client-fingerprint: chrome
+    name: "\U0001F300其他3-CY | ⬇️ 10.8MB/s"
     network: ws
     port: 2053
     server: 104.31.16.95
@@ -151,31 +177,15 @@ proxies:
       headers:
         Host: ir.akcovufun.ir
         User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko)
-          Chrome/70.0.3538.102 Safari/537.36
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/68.0.3440.75 Safari/537.36
       path: /
     xudp: true
     servername: ir.akcovufun.ir
-  - alterId: '2'
-    cipher: auto
-    name: "\U0001F1FA\U0001F1F8美国7 | ⬇️ 5.6MB/s"
+  - name: "\U0001F1F8\U0001F1EC新加坡1 | ⬇️ 1.3MB/s"
     network: ws
-    port: 30829
-    server: v29.heduian.link
-    skip-cert-verify: false
-    tls: false
-    type: vmess
-    udp: true
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    ws-opts:
-      headers:
-        Host: ocbc.com
-      path: /oooo
-    xudp: true
-  - name: "\U0001F1EE\U0001F1F3印度1 | ⬇️ 2.2MB/s"
-    network: ws
-    port: 80
-    server: 45.80.111.225
+    port: 8880
+    server: 141.101.120.20
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -183,14 +193,47 @@ proxies:
       headers:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/56.0.2924.87 Safari/537.36
-      path: '/Telegram: @vpnAndroid2/?ed=2560'
+          Mozilla/5.0 (Linux; Android 5.1; HUAWEI CUN-L22 Build/HUAWEICUN-L22;
+          wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0
+          Chrome/62.0.3202.84 Mobile Safari/537.36
+      path: /?ed=2560
     xudp: true
-  - name: "\U0001F1ED\U0001F1F0香港2 | ⬇️ 1.3MB/s"
+    servername: reedfree8mahsang2.redorg.ir
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: "\U0001F300其他4-EE | ⬇️ 1.2MB/s"
+    network: tcp
+    port: 5234
+    reality-opts:
+      public-key: 1juiWgfU1-cGsbu9zxKCly7Vn3WGES5x6S86r90_vwc
+      short-id: b7e284c9b786f709
+    server: 146.19.143.150
+    tls: true
+    type: vless
+    udp: true
+    uuid: a5053089-8d6e-0ef9-8d09-aebb94f33aff
+    xudp: true
+    servername: yandex.com
+  - name: "\U0001F1F3\U0001F1F1荷兰3 | ⬇️ 1.1MB/s"
     network: ws
-    port: 80
-    server: 45.131.208.56
+    port: 8880
+    server: 156.238.18.110
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 6.0.1; SM-G532M Build/MMB29T)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile
+          Safari/537.36
+      path: "/Telegram\U0001F1E8\U0001F1F3 @pgkj666 /?ed=2560"
+    xudp: true
+  - name: "\U0001F1E9\U0001F1EA德国1 | ⬇️ 5.2MB/s"
+    network: ws
+    port: 8880
+    server: 156.238.18.127
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -199,43 +242,13 @@ proxies:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
           Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/55.0.2883.87 Safari/537.36
-      path: '/Telegram:'
+          like Gecko) Chrome/66.0.3359.181 Safari/537.36
+      path: "/Telegram\U0001F1E8\U0001F1F3"
     xudp: true
-  - name: "\U0001F1E9\U0001F1EA德国1 | ⬇️ 11.1MB/s"
-    network: ws
-    port: 80
-    server: 170.114.45.171
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/52.0.2743.116 Safari/537.36
-      path: '/Telegram:'
-    xudp: true
-  - name: "\U0001F1E9\U0001F1EA德国2 | ⬇️ 7.2MB/s"
-    network: ws
-    port: 80
-    server: 45.131.7.55
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/70.0.3538.102 Safari/537.36
-      path: '/Telegram:'
-    xudp: true
-  - name: "\U0001F1F3\U0001F1F1荷兰2 | ⬇️ 1.3MB/s"
+  - name: "\U0001F1FA\U0001F1F8美国4 | ⬇️ 10.2MB/s"
     network: ws
     port: 8880
-    server: 193.33.87.20
+    server: 156.238.18.111
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -243,60 +256,27 @@ proxies:
       headers:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
-          Mozilla/5.0 (Linux; Android 5.1; A1601 Build/LMY47I)
-          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile
-          Safari/537.36
-      path: /
+          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/64.0.3282.186 Safari/537.36
+      path: "/Telegram\U0001F1E8\U0001F1F3"
+    xudp: true
+  - name: "\U0001F1F0\U0001F1F7韩国1 | ⬇️ 2.2MB/s"
+    network: ws
+    port: 8880
+    server: 162.159.7.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/66.0.3359.139 Safari/537.36
+      path: /?ed=2560
     xudp: true
     servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1F3\U0001F1F1荷兰3 | ⬇️ 12.1MB/s"
-    network: ws
-    port: 80
-    server: 45.12.31.137
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/55.0.2883.87 Safari/537.36
-      path: '/Telegram:'
-    xudp: true
-  - name: "\U0001F1FA\U0001F1F8美国8 | ⬇️ 1.7MB/s"
-    network: ws
-    port: 8880
-    server: 91.193.58.179
-    type: vless
-    udp: true
-    uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-    ws-opts:
-      headers:
-        Host: sk.laoyoutiao.link
-        User-Agent: >-
-          Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.7
-          (KHTML, like Gecko) Chrome/7.0.517.44 Safari/534.7
-      path: /TelegramU0001F1E8U0001F1F3
-    xudp: true
-    servername: sk.laoyoutiao.link
-  - name: "\U0001F1F0\U0001F1F7韩国2 | ⬇️ 1.6MB/s"
-    network: ws
-    port: 8880
-    server: 104.129.165.20
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/45.0.2454.85 Safari/537.36
-      path: /
-    xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1FA\U0001F1F8美国9 | ⬇️ 8.3MB/s"
+  - name: "\U0001F1FA\U0001F1F8美国5 | ⬇️ 1.4MB/s"
     network: ws
     port: 8880
     server: 167.68.11.20
@@ -307,485 +287,12 @@ proxies:
       headers:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
-          Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.10
-          (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-      path: /
-    xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1F8\U0001F1EC新加坡1 | ⬇️ 2.0MB/s"
-    network: ws
-    port: 80
-    server: 141.193.213.20
-    type: vless
-    udp: true
-    uuid: 438f9559-1671-45cf-9d2c-338fe6766acf
-    ws-opts:
-      headers:
-        Host: 14.sahanwickramasinghe.shop
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/55.0.2883.87 Safari/537.36
-      path: /
-    xudp: true
-    servername: 14.sahanwickramasinghe.shop
-  - name: "\U0001F1E9\U0001F1EA德国3 | ⬇️ 2.1MB/s"
-    network: ws
-    port: 8080
-    server: 104.19.54.50
-    type: vless
-    udp: true
-    uuid: 2d3e55a3-9d2c-4654-af05-1f67d6e26f33
-    ws-opts:
-      headers:
-        Host: >-
-          www.speedtest.net.www.zula.ir.cloudflare.com.www.parsvds.ir.svgspeedtest.net.
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/52.0.2743.116 Safari/537.36
-      path: >-
-        /@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy----@XvProxy?ed=2048
-    xudp: true
-  - name: "\U0001F1E9\U0001F1EA德国4 | ⬇️ 5.9MB/s"
-    network: ws
-    port: 80
-    server: 45.12.30.240
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Linux; Android 7.0; BLL-L22 Build/HUAWEIBLL-L22)
-          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile
-          Safari/537.36
-      path: '/Telegram: @vpnAndroid2/?ed=2560'
-    xudp: true
-  - name: "\U0001F1FA\U0001F1F8美国10 | ⬇️ 1.3MB/s"
-    network: ws
-    port: 8880
-    server: 91.193.58.233
-    type: vless
-    udp: true
-    uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-    ws-opts:
-      headers:
-        Host: sk.laoyoutiao.link
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko)
-          Chrome/70.0.3538.102 Safari/537.36
-      path: /TelegramU0001F1E8U0001F1F3
-    xudp: true
-    servername: sk.laoyoutiao.link
-  - name: "\U0001F1F3\U0001F1F1荷兰4 | ⬇️ 1.0MB/s"
-    network: ws
-    port: 8880
-    server: 62.72.166.20
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/51.0.2704.103 Safari/537.36
-      path: /
-    xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1FA\U0001F1F8美国11 | ⬇️ 1.9MB/s"
-    network: ws
-    port: 80
-    server: 193.9.49.158
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/54.0.2840.99 Safari/537.36
-      path: '/Telegram:'
-    xudp: true
-  - name: "\U0001F1F8\U0001F1EC新加坡2 | ⬇️ 2.3MB/s"
-    network: ws
-    port: 80
-    server: 170.114.45.6
-    type: vless
-    udp: true
-    uuid: 438f9559-1671-45cf-9d2c-338fe6766acf
-    ws-opts:
-      headers:
-        Host: 14.sahanwickramasinghe.shop
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/56.0.2924.87 Safari/537.36
-      path: /
-    xudp: true
-    servername: 14.sahanwickramasinghe.shop
-  - name: "\U0001F1FA\U0001F1F8美国12 | ⬇️ 1.5MB/s"
-    network: ws
-    port: 8880
-    server: 198.41.199.20
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/55.0.2883.87 Safari/537.36
-      path: /
-    xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - client-fingerprint: chrome
-    name: "\U0001F1EB\U0001F1F7法国3 | ⬇️ 1.3MB/s"
-    network: ws
-    port: 22224
-    server: 15.237.97.69
-    tls: true
-    type: vless
-    udp: true
-    uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
-    ws-opts:
-      headers:
-        Host: ''
-        User-Agent: >-
-          Mozilla/5.0 (Linux; Android 6.0.1; CPH1607 Build/MMB29M; wv)
-          AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0
-          Chrome/63.0.3239.111 Mobile Safari/537.36
-      path: /telegram-channel-vlessconfig
-    xudp: true
-    servername: trojan.burgerip.co.uk
-  - name: "\U0001F1E9\U0001F1EA德国5 | ⬇️ 7.7MB/s"
-    network: ws
-    port: 8880
-    server: 162.159.248.20
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (X11; Datanyze; Linux x86_64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/65.0.3325.181 Safari/537.36
-      path: /
-    xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1E6\U0001F1EA阿拉伯酋长国1 | ⬇️ 1.1MB/s"
-    network: ws
-    port: 80
-    server: 45.131.5.94
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
           Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/62.0.3202.89 Safari/537.36
-      path: '/Telegram:'
-    xudp: true
-  - name: "\U0001F1F0\U0001F1F7韩国3 | ⬇️ 3.2MB/s"
-    network: ws
-    port: 80
-    server: 45.131.5.211
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/54.0.2840.71 Safari/537.36
-      path: '/Telegram: @vpnAndroid2/?ed=2560'
-    xudp: true
-  - alpn:
-      - h3
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    name: "\U0001F1FA\U0001F1F8美国13 | ⬇️ 8.2MB/s"
-    network: ws
-    port: 443
-    server: 104.18.148.234
-    tls: true
-    type: vless
-    udp: true
-    uuid: d69b938c-cbf4-4b61-aa97-e5762c304a25
-    ws-opts:
-      headers:
-        Host: madcity2.777999.lol
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/70.0.3538.77 Safari/537.36
-      path: /
-    xudp: true
-    servername: madcity2.777999.lol
-  - name: "\U0001F1EE\U0001F1F3印度2 | ⬇️ 7.7MB/s"
-    network: ws
-    port: 8880
-    server: 198.41.192.20
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/37.0.2062.120 Safari/537.36
-      path: /
-    xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1E9\U0001F1EA德国6 | ⬇️ 1.5MB/s"
-    network: ws
-    port: 80
-    server: 185.162.229.205
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/65.0.3325.162 Safari/537.36
-      path: '/Telegram:'
-    xudp: true
-  - name: "\U0001F1E9\U0001F1EA德国7 | ⬇️ 1.2MB/s"
-    network: ws
-    port: 80
-    server: 45.131.208.6
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Linux; Android 6.0; vivo 1713 Build/MRA58K)
-          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.124 Mobile
-          Safari/537.36
-      path: '/Telegram: @vpnAndroid2/?ed=2560'
-    xudp: true
-  - name: "\U0001F1F8\U0001F1EC新加坡3 | ⬇️ 3.3MB/s"
-    network: ws
-    port: 80
-    server: 141.193.213.21
-    type: vless
-    udp: true
-    uuid: 438f9559-1671-45cf-9d2c-338fe6766acf
-    ws-opts:
-      headers:
-        Host: 14.sahanwickramasinghe.shop
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
-          Chrome/70.0.3538.102 Safari/537.36
-      path: /
-    xudp: true
-    servername: 14.sahanwickramasinghe.shop
-  - client-fingerprint: chrome
-    name: "\U0001F1EB\U0001F1F7法国4 | ⬇️ 3.8MB/s"
-    network: ws
-    port: 443
-    server: 199.34.228.164
-    tls: true
-    type: vless
-    udp: true
-    uuid: 96a1b724-68d2-4f4d-ab25-38ecd83577bc
-    ws-opts:
-      headers:
-        Host: Wv2NhB0hVh.SoLiJoNiTo.CoM
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/70.0.3538.110 Safari/537.36
-      path: /
-    xudp: true
-    servername: Wv2NhB0hVh.SoLiJoNiTo.CoM
-  - name: "\U0001F1FA\U0001F1F8美国14 | ⬇️ 1.8MB/s"
-    network: ws
-    port: 8880
-    server: 89.116.180.20
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/63.0.3239.84 Safari/537.36
-      path: /
-    xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1FA\U0001F1F8美国15 | ⬇️ 9.9MB/s"
-    network: ws
-    port: 80
-    server: 45.131.209.193
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/69.0.3497.100 Safari/537.36
-      path: '/Telegram: @vpnAndroid2/?ed=2560'
-    xudp: true
-  - name: "\U0001F1E9\U0001F1EA德国8 | ⬇️ 2.4MB/s"
-    network: ws
-    port: 8880
-    server: 172.66.2.20
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.30 (KHTML, like Gecko)
-          Slackware/Chrome/12.0.742.100 Safari/534.30
-      path: /
-    xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1FA\U0001F1F8美国16 | ⬇️ 1.3MB/s"
-    network: ws
-    port: 8880
-    server: 91.193.58.126
-    type: vless
-    udp: true
-    uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-    ws-opts:
-      headers:
-        Host: sk.laoyoutiao.link
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/50.0.2661.102 Safari/537.36
-      path: /TelegramU0001F1E8U0001F1F3
-    xudp: true
-    servername: sk.laoyoutiao.link
-  - name: "\U0001F1EB\U0001F1EE芬兰1 | ⬇️ 1.1MB/s"
-    network: ws
-    port: 80
-    server: 185.135.9.73
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML,
           like Gecko) Chrome/60.0.3112.90 Safari/537.36
-      path: '/Telegram: @vpnAndroid2/?ed=2560'
-    xudp: true
-  - name: "\U0001F1FA\U0001F1F8美国17 | ⬇️ 1.0MB/s"
-    network: ws
-    port: 8880
-    server: 91.193.58.1
-    type: vless
-    udp: true
-    uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-    ws-opts:
-      headers:
-        Host: sk.laoyoutiao.link
-        User-Agent: >-
-          Mozilla/5.0 (Linux; Android 7.0; Moto C Build/NRD90M.059)
-          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile
-          Safari/537.36
-      path: "/Telegram\U0001F1E8\U0001F1F3"
-    xudp: true
-    servername: sk.laoyoutiao.link
-  - name: "\U0001F1FA\U0001F1F8美国18 | ⬇️ 1.3MB/s"
-    network: ws
-    port: 8880
-    server: 91.193.58.218
-    type: vless
-    udp: true
-    uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-    ws-opts:
-      headers:
-        Host: sk.laoyoutiao.link
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
-          Chrome/70.0.3538.77 Safari/537.36
-      path: /TelegramU0001F1E8U0001F1F3
-    xudp: true
-    servername: sk.laoyoutiao.link
-  - name: "\U0001F1FA\U0001F1F8美国19 | ⬇️ 5.4MB/s"
-    network: ws
-    port: 8880
-    server: 198.41.219.20
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko)
-          Chrome/49.0.2623.112 Safari/537.36
-      path: /
+      path: /?ed=2560
     xudp: true
     servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1F8\U0001F1EC新加坡4 | ⬇️ 1.2MB/s"
-    network: ws
-    port: 8880
-    server: 198.41.214.20
-    type: vless
-    udp: true
-    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
-    ws-opts:
-      headers:
-        Host: reedfree8mahsang2.redorg.ir
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/57.0.2987.133 Safari/537.36
-      path: /
-    xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - client-fingerprint: chrome
-    name: "\U0001F1FA\U0001F1F8美国20 | ⬇️ 1.2MB/s"
-    network: ws
-    port: 8443
-    server: 190.93.246.246
-    tls: true
-    type: vless
-    udp: true
-    uuid: b5441b0d-2147-4898-8a6a-9b2c87f58382
-    ws-opts:
-      headers:
-        Host: bitget1.asdasd.click
-        User-Agent: >-
-          Mozilla/5.0 (Linux; Android 7.0; BLL-L22 Build/HUAWEIBLL-L22)
-          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile
-          Safari/537.36
-      path: /?ed=2560security=tls
-    xudp: true
-    servername: bitget1.asdasd.click
-  - client-fingerprint: chrome
-    http-opts:
-      headers: {}
-      path:
-        - /
-    name: "\U0001F1FA\U0001F1F8美国21 | ⬇️ 1.0MB/s"
-    network: tcp
-    port: 443
-    server: 135.148.177.165
-    tls: true
-    type: vless
-    udp: true
-    uuid: c4fa89d4-fcb9-48ba-adbc-665181cc817f
-    xudp: true
-    servername: 147135010072.sec21org.com
-  - name: "\U0001F1FA\U0001F1F8美国22 | ⬇️ 12.4MB/s"
+  - name: "\U0001F1E9\U0001F1EA德国2 | ⬇️ 12.0MB/s"
     network: ws
     port: 8880
     server: 162.159.61.20
@@ -797,14 +304,14 @@ proxies:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
           Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/49.0.2623.110 Safari/537.36
-      path: /
+          Gecko) Chrome/40.0.2214.115 Safari/537.36
+      path: /?ed=2560
     xudp: true
     servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1E9\U0001F1EA德国9 | ⬇️ 2.3MB/s"
+  - name: "\U0001F1E9\U0001F1EA德国3 | ⬇️ 1.6MB/s"
     network: ws
     port: 80
-    server: 45.131.209.1
+    server: 170.114.45.171
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -812,14 +319,397 @@ proxies:
       headers:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/57.0.2987.133 Safari/537.36
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/58.0.3029.110 Safari/537.36
       path: '/Telegram:'
     xudp: true
-  - name: "\U0001F1F3\U0001F1F1荷兰5 | ⬇️ 3.2MB/s"
+  - name: "\U0001F1F0\U0001F1F7韩国2 | ⬇️ 1.0MB/s"
     network: ws
     port: 8880
-    server: 45.131.208.20
+    server: 172.66.44.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 6.0.1; SM-G532M Build/MMB29T)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile
+          Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1E9\U0001F1EA德国4 | ⬇️ 2.8MB/s"
+    network: ws
+    port: 8880
+    server: 172.66.2.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 6.0.1; SM-G532M Build/MMB29T)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile
+          Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1F8\U0001F1EC新加坡2 | ⬇️ 9.5MB/s"
+    network: ws
+    port: 80
+    server: 170.114.45.6
+    type: vless
+    udp: true
+    uuid: 438f9559-1671-45cf-9d2c-338fe6766acf
+    ws-opts:
+      headers:
+        Host: 14.sahanwickramasinghe.shop
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/51.0.2704.106 Safari/537.36
+      path: /
+    xudp: true
+    servername: 14.sahanwickramasinghe.shop
+  - name: "\U0001F1E9\U0001F1EA德国5 | ⬇️ 2.3MB/s"
+    network: ws
+    port: 8880
+    server: 173.245.58.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/70.0.3538.102 Safari/537.36
+      path: /
+    xudp: true
+  - name: "\U0001F1F0\U0001F1F7韩国3 | ⬇️ 2.0MB/s"
+    network: ws
+    port: 8880
+    server: 185.176.24.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko)
+          Chrome/49.0.2623.112 Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: 24973vless
+    name: "\U0001F1FA\U0001F1F8美国6 | ⬇️ 3.3MB/s"
+    network: grpc
+    port: 24973
+    reality-opts:
+      public-key: XxcGc_ouFAOpL7naY381irYFHW5DmoW2OBFGQpuRY0I
+      short-id: deb584a4c0c261c1
+    server: 174.138.94.228
+    tls: true
+    type: vless
+    udp: true
+    uuid: 522af137-d625-4974-ae1e-911a980e3844
+    xudp: true
+    servername: refersion.com
+  - name: "\U0001F1E6\U0001F1EA阿拉伯酋长国1 | ⬇️ 1.5MB/s"
+    network: ws
+    port: 80
+    server: 185.148.106.56
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/59.0.3071.115 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
+    xudp: true
+  - name: "\U0001F1FA\U0001F1F8美国7 | ⬇️ 4.5MB/s"
+    network: ws
+    port: 8880
+    server: 185.16.110.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/56.0.2924.87 Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1E9\U0001F1EA德国6 | ⬇️ 12.1MB/s"
+    network: ws
+    port: 8880
+    server: 185.162.231.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/63.0.3239.132 Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1F8\U0001F1EC新加坡3 | ⬇️ 1.9MB/s"
+    network: ws
+    port: 80
+    server: 188.42.89.91
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/41.0.2272.76 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1E9\U0001F1EA德国7 | ⬇️ 2.7MB/s"
+    network: ws
+    port: 8880
+    server: 192.0.63.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 7.0; Moto G (5) Build/NPPS25.137-93-14)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile
+          Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1EE\U0001F1F3印度1 | ⬇️ 2.1MB/s"
+    network: ws
+    port: 80
+    server: 193.9.49.158
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 7.0; SM-G610F Build/NRD90M)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile
+          Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1E9\U0001F1EA德国8 | ⬇️ 1.1MB/s"
+    network: ws
+    port: 8880
+    server: 198.41.214.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.30 (KHTML, like Gecko)
+          Chrome/12.0.742.100 Safari/534.30
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1EB\U0001F1EE芬兰2 | ⬇️ 1.8MB/s"
+    network: ws
+    port: 8880
+    server: 198.41.223.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+          Chrome/57.0.2987.133 Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1EB\U0001F1EE芬兰3 | ⬇️ 9.3MB/s"
+    network: ws
+    port: 8880
+    server: 198.41.192.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 7.1; Mi A1 Build/N2G47H)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile
+          Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1FA\U0001F1F8美国8 | ⬇️ 2.2MB/s"
+    network: ws
+    port: 8880
+    server: 198.41.217.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/70.0.3538.110 Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1E9\U0001F1EA德国9 | ⬇️ 12.0MB/s"
+    network: ws
+    port: 8880
+    server: 198.41.199.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 7.0; TRT-LX2 Build/HUAWEITRT-LX2; wv)
+          AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0
+          Chrome/59.0.3071.125 Mobile Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1F3\U0001F1F1荷兰4 | ⬇️ 1.1MB/s"
+    network: ws
+    port: 8880
+    server: 31.12.75.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/70.0.3538.67 Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1E9\U0001F1EA德国10 | ⬇️ 1.1MB/s"
+    network: ws
+    port: 80
+    server: 31.43.179.110
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/62.0.3202.94 Safari/537.36
+      path: '/Telegram:'
+    xudp: true
+  - name: "\U0001F1E9\U0001F1EA德国11 | ⬇️ 11.8MB/s"
+    network: ws
+    port: 80
+    server: 23.134.82.1
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/55.0.2883.87 Safari/537.36
+      path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+    xudp: true
+  - name: "\U0001F1FA\U0001F1F8美国9 | ⬇️ 1.0MB/s"
+    network: ws
+    port: 80
+    server: 45.131.210.98
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/60.0.3112.90 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1E9\U0001F1EA德国12 | ⬇️ 1.7MB/s"
+    network: ws
+    port: 80
+    server: 45.131.208.27
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/70.0.3538.77 Safari/537.36
+      path: '/Telegram:'
+    xudp: true
+  - name: "\U0001F1FA\U0001F1F8美国10 | ⬇️ 1.2MB/s"
+    network: ws
+    port: 80
+    server: 45.131.208.34
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/65.0.3325.181 Safari/537.36
+      path: '/Telegram: @vpnAndroid2/?ed=2560'
+    xudp: true
+  - name: "\U0001F1F0\U0001F1F7韩国4 | ⬇️ 1.5MB/s"
+    network: ws
+    port: 80
+    server: 45.131.211.196
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/55.0.2883.87 Safari/537.36
+      path: '/Telegram:'
+    xudp: true
+  - name: "\U0001F1FA\U0001F1F8美国11 | ⬇️ 3.6MB/s"
+    network: ws
+    port: 80
+    server: 45.131.208.114
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -831,11 +721,10 @@ proxies:
           Gecko) Chrome/45.0.2454.85 Safari/537.36
       path: /
     xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - name: "\U0001F1E9\U0001F1EA德国10 | ⬇️ 1.0MB/s"
+  - name: "\U0001F1F0\U0001F1F7韩国5 | ⬇️ 10.2MB/s"
     network: ws
     port: 80
-    server: 45.12.31.10
+    server: 45.131.210.236
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -844,83 +733,14 @@ proxies:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
           Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/46.0.2490.80 Safari/537.36
-      path: '/Telegram: @vpnAndroid2/?ed=2560'
+          Gecko) Chrome/51.0.2704.103 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
     xudp: true
-  - name: "\U0001F1FA\U0001F1F8美国23 | ⬇️ 1.9MB/s"
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1FA\U0001F1F8美国12 | ⬇️ 1.2MB/s"
     network: ws
     port: 8880
-    server: 91.193.58.31
-    type: vless
-    udp: true
-    uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-    ws-opts:
-      headers:
-        Host: sk.laoyoutiao.link
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/70.0.3538.102 Safari/537.36
-      path: /TelegramU0001F1E8U0001F1F3
-    xudp: true
-    servername: sk.laoyoutiao.link
-  - name: "\U0001F1FA\U0001F1F8美国24 | ⬇️ 2.1MB/s"
-    network: ws
-    port: 8880
-    server: 91.193.58.17
-    type: vless
-    udp: true
-    uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-    ws-opts:
-      headers:
-        Host: sk.laoyoutiao.link
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/63.0.3239.132 Safari/537.36
-      path: /TelegramU0001F1E8U0001F1F3
-    xudp: true
-    servername: sk.laoyoutiao.link
-  - name: "\U0001F1FA\U0001F1F8美国25 | ⬇️ 1.3MB/s"
-    network: ws
-    port: 8880
-    server: 91.193.58.132
-    type: vless
-    udp: true
-    uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-    ws-opts:
-      headers:
-        Host: sk.laoyoutiao.link
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/70.0.3538.67 Safari/537.36
-      path: /TelegramU0001F1E8U0001F1F3
-    xudp: true
-    servername: sk.laoyoutiao.link
-  - alpn:
-      - h3
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    name: "\U0001F1FA\U0001F1F8美国26 | ⬇️ 1.4MB/s"
-    network: ws
-    port: 443
-    server: 5.10.244.109
-    tls: true
-    type: vless
-    udp: true
-    uuid: d69b938c-cbf4-4b61-aa97-e5762c304a25
-    ws-opts:
-      headers:
-        Host: madcity2.777999.lol
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/63.0.3239.132 Safari/537.36
-      path: /
-    xudp: true
-    servername: madcity2.777999.lol
-  - name: "\U0001F1EB\U0001F1EE芬兰2 | ⬇️ 4.1MB/s"
-    network: ws
-    port: 8880
-    server: 172.66.44.20
+    server: 45.131.211.20
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -928,49 +748,46 @@ proxies:
       headers:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/57.0.2987.133 Safari/537.36
+          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/69.0.3497.100 Safari/537.36
       path: /
     xudp: true
     servername: reedfree8mahsang2.redorg.ir
-  - client-fingerprint: chrome
-    name: "\U0001F1EB\U0001F1F7法国5 | ⬇️ 8.1MB/s"
-    network: ws
-    port: 443
-    server: 208.86.168.210
-    tls: true
-    type: vless
-    udp: true
-    uuid: 96a1b724-68d2-4f4d-ab25-38ecd83577bc
-    ws-opts:
-      headers:
-        Host: Wv2NhB0hVh.SoLiJoNiTo.CoM
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/70.0.3538.77 Safari/537.36
-      path: /
-    xudp: true
-    servername: Wv2NhB0hVh.SoLiJoNiTo.CoM
-  - name: "\U0001F1FA\U0001F1F8美国27 | ⬇️ 1.8MB/s"
-    network: ws
-    port: 8880
-    server: 91.193.58.47
-    type: vless
-    udp: true
-    uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
-    ws-opts:
-      headers:
-        Host: sk.laoyoutiao.link
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/55.0.2883.87 Safari/537.36
-      path: /TelegramU0001F1E8U0001F1F3
-    xudp: true
-    servername: sk.laoyoutiao.link
-  - name: "\U0001F1FA\U0001F1F8美国28 | ⬇️ 3.1MB/s"
+  - name: "\U0001F1F3\U0001F1F1荷兰5 | ⬇️ 1.4MB/s"
     network: ws
     port: 80
-    server: 45.12.31.59
+    server: 45.8.211.220
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/51.0.2704.106 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
+    xudp: true
+  - name: "\U0001F1FA\U0001F1F8美国13 | ⬇️ 2.6MB/s"
+    network: ws
+    port: 80
+    server: 45.159.218.154
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile
+          Safari/537.36
+      path: '/Telegram:'
+    xudp: true
+  - name: "\U0001F1FA\U0001F1F8美国14 | ⬇️ 1.5MB/s"
+    network: ws
+    port: 80
+    server: 45.142.120.99
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -979,13 +796,14 @@ proxies:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
           Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/41.0.2272.76 Safari/537.36
-      path: '/Telegram: @vpnAndroid2/?ed=2560'
+          Gecko) Chrome/31.0.1650.57 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
     xudp: true
-  - name: "\U0001F1EE\U0001F1F3印度3 | ⬇️ 4.9MB/s"
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1FA\U0001F1F8美国15 | ⬇️ 8.3MB/s"
     network: ws
     port: 80
-    server: 45.131.7.24
+    server: 45.131.7.224
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -993,14 +811,94 @@ proxies:
       headers:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko)
-          Chrome/70.0.3538.67 Safari/537.36
-      path: '/Telegram: @vpnAndroid2/?ed=2560'
+          Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/57.0.2987.133 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
     xudp: true
-  - name: "\U0001F1FA\U0001F1F8美国29 | ⬇️ 5.9MB/s"
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1F0\U0001F1F7韩国6 | ⬇️ 3.8MB/s"
     network: ws
     port: 80
-    server: 45.131.211.95
+    server: 45.8.211.225
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/62.0.3202.89 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1F8\U0001F1EC新加坡4 | ⬇️ 3.5MB/s"
+    network: ws
+    port: 80
+    server: 45.85.119.88
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+          Chrome/69.0.3497.100 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1E9\U0001F1EA德国13 | ⬇️ 4.4MB/s"
+    network: ws
+    port: 8880
+    server: 62.72.166.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/64.0.3282.186 Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1EE\U0001F1F3印度2 | ⬇️ 2.1MB/s"
+    network: ws
+    port: 80
+    server: 62.3.12.76
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/51.0.2704.106 Safari/537.36
+      path: "/Telegram\U0001F1E8\U0001F1F3"
+    xudp: true
+  - name: "\U0001F1FA\U0001F1F8美国16 | ⬇️ 2.0MB/s"
+    network: ws
+    port: 8880
+    server: 89.116.250.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/55.0.2883.87 Safari/537.36
+      path: /?ed=2560
+    xudp: true
+    servername: reedfree8mahsang2.redorg.ir
+  - name: "\U0001F1ED\U0001F1F0香港2 | ⬇️ 1.2MB/s"
+    network: ws
+    port: 8880
+    server: 89.116.46.20
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -1009,13 +907,32 @@ proxies:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
           Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/60.0.3112.113 Safari/537.36
-      path: '/Telegram:'
+          like Gecko) Chrome/55.0.2883.87 Safari/537.36
+      path: /?ed=2560
     xudp: true
-  - name: "\U0001F1FA\U0001F1F8美国30 | ⬇️ 15.9MB/s"
+    servername: reedfree8mahsang2.redorg.ir
+  - client-fingerprint: chrome
+    http-opts:
+      headers: {}
+      path:
+        - /
+    name: "\U0001F300其他5-TR | ⬇️ 4.0MB/s"
+    network: tcp
+    port: 55555
+    reality-opts:
+      public-key: 1zxVP27bDf_TlHFEbBne26fdhCFPftpB9zt7-nCd8HQ
+      short-id: 867599a1433d8a1e
+    server: 79.110.51.52
+    tls: true
+    type: vless
+    udp: true
+    uuid: 1799b29e-d587-4ad7-b58e-5ef51c158173
+    xudp: true
+    servername: stackoverflow.com
+  - name: "\U0001F1EB\U0001F1EE芬兰4 | ⬇️ 1.6MB/s"
     network: ws
     port: 8880
-    server: 154.197.108.20
+    server: 89.116.180.20
     type: vless
     udp: true
     uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
@@ -1023,65 +940,225 @@ proxies:
       headers:
         Host: reedfree8mahsang2.redorg.ir
         User-Agent: >-
-          Mozilla/5.0 (Windows; U; Windows NT 6.1; de-DE) AppleWebKit/534.17
-          (KHTML, like Gecko) Chrome/10.0.649.0 Safari/534.17
-      path: /
+          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/45.0.2454.85 Safari/537.36
+      path: /?ed=2560
     xudp: true
-    servername: reedfree8mahsang2.redorg.ir
-  - client-fingerprint: chrome
-    name: "\U0001F1EB\U0001F1F7法国6 | ⬇️ 1.0MB/s"
+  - name: "\U0001F1EE\U0001F1F3印度3 | ⬇️ 2.4MB/s"
     network: ws
+    port: 80
+    server: 94.228.164.249
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/70.0.3538.77 Safari/537.36
+      path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+    xudp: true
+  - client-fingerprint: chrome
+    name: "\U0001F1E9\U0001F1EA德国14 | ⬇️ 2.2MB/s"
+    network: tcp
     port: 443
-    server: 194.53.53.34
+    reality-opts:
+      public-key: SWA-po18cETv3noGE9OearcQaA6ERQRg31ejuSMpbkI
+      short-id: e54b5ad736ae4c38
+    server: de-vpnmizban.gamingbazirani.ir
     tls: true
     type: vless
     udp: true
-    uuid: 96a1b724-68d2-4f4d-ab25-38ecd83577bc
-    ws-opts:
-      headers:
-        Host: Wv2NhB0hVh.SoLiJoNiTo.CoM
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/46.0.2490.86 Safari/537.36
-      path: /
+    uuid: e312a92d-fdc7-49be-adfc-94c5f2a282ee
     xudp: true
-    servername: Wv2NhB0hVh.SoLiJoNiTo.CoM
-  - cipher: aes-256-cfb
-    name: "\U0001F300其他2-VN | ⬇️ 1.2MB/s"
-    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-    port: 38388
-    server: 103.186.155.18
-    type: ss
-    udp: true
-  - down: ''
-    fingerprint: ''
-    name: "\U0001F1EB\U0001F1F7法国7 | ⬇️ 4.0MB/s"
-    obfs: ''
-    obfs-password: ''
-    password: dongtaiwang.com
-    port: 4489
-    server: hy2-1.694463.xyz
-    skip-cert-verify: true
-    sni: www.bing.com
-    type: hysteria2
-    up: ''
-  - name: "\U0001F1F8\U0001F1EC新加坡5 | ⬇️ 1.8MB/s"
+    servername: www.cdn77.com
+  - alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    name: "\U0001F1EB\U0001F1F7法国1 | ⬇️ 3.5MB/s"
     network: ws
-    port: 80
-    server: support.zoom.us
+    port: 443
+    server: ns4.esfahansiman.com
+    tls: true
     type: vless
     udp: true
-    uuid: 438f9559-1671-45cf-9d2c-338fe6766acf
+    uuid: 54e25aa4-0340-4791-be67-d6320db32e74
     ws-opts:
       headers:
-        Host: 14.sahanwickramasinghe.shop
+        Host: WWW.pegAh-Esfahan.De.
         User-Agent: >-
-          Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.7
-          (KHTML, like Gecko) Chrome/7.0.517.44 Safari/534.7
-      path: /
+          Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko)
+          Chrome/49.0.2623.112 Safari/537.36
+      path: >-
+        /TELEGRAM--jet_config--CANALTELEGRAM--jet_config--TELEGRAM--jet_config--CANALTELEGRAM--jet_config--TELEGRAM--jet_config
     xudp: true
-    servername: 14.sahanwickramasinghe.shop
-  - name: "\U0001F1F8\U0001F1EC新加坡6 | ⬇️ 10.2MB/s"
+    servername: WWW.pegAh-Esfahan.De.
+  - name: "\U0001F1E9\U0001F1EA德国15 | ⬇️ 2.1MB/s"
+    network: ws
+    port: 80
+    server: 45.131.210.98
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+          Chrome/41.0.2272.101 Safari/537.36
+      path: '/Telegram:'
+    xudp: true
+  - name: "\U0001F1E9\U0001F1EA德国16 | ⬇️ 1.5MB/s"
+    network: ws
+    port: 8880
+    server: 162.159.244.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/48.0.2564.116 Safari/537.36
+      path: /?ed=2560
+    xudp: true
+  - alterId: '0'
+    cipher: auto
+    name: "\U0001F1F0\U0001F1F7韩国7 | ⬇️ 1.8MB/s"
+    network: ws
+    port: 443
+    server: www.visa.com.tw
+    skip-cert-verify: false
+    tls: true
+    type: vmess
+    udp: true
+    uuid: d0eb0f6f-68a8-4ece-c33f-73c5d71ac3a3
+    ws-opts:
+      early-data-header-name: Sec-WebSocket-Protocol
+      headers:
+        Host: kt-icn-2.ecp.dpdns.org
+      max-early-data: 2560
+      path: /zedware-network/korea-telecom/
+    xudp: true
+    servername: www.visa.com.tw
+  - cipher: aes-256-cfb
+    name: "\U0001F300其他6-VN | ⬇️ 1.8MB/s"
+    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+    port: 38388
+    server: 103.186.154.18
+    type: ss
+    udp: true
+  - name: "\U0001F1FA\U0001F1F8美国17 | ⬇️ 1.1MB/s"
+    network: ws
+    port: 80
+    server: 185.193.30.20
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/52.0.2743.116 Safari/537.36
+      path: '/Telegram:'
+    xudp: true
+  - name: "\U0001F1EE\U0001F1F3印度4 | ⬇️ 4.2MB/s"
+    network: ws
+    port: 80
+    server: 188.42.89.91
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+          Chrome/56.0.2924.87 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
+    xudp: true
+  - name: "\U0001F1F8\U0001F1EC新加坡5 | ⬇️ 1.1MB/s"
+    network: ws
+    port: 80
+    server: 45.12.30.76
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+          Chrome/56.0.2924.87 Safari/537.36
+      path: '/Telegram:'
+    xudp: true
+  - client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: >-
+        Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs
+    name: "\U0001F300其他7-MD | ⬇️ 3.7MB/s"
+    network: grpc
+    port: 443
+    reality-opts:
+      public-key: u28jiCcALXYBSmP5K1-aY4VBd6UdUjNxJBcZ-si0YCo
+      short-id: d480
+    server: 185.235.241.208
+    tls: true
+    type: vless
+    udp: true
+    uuid: 538ad535-f6ec-4dd6-bc41-b36fb3b7b923
+    xudp: true
+    servername: www.cdn77.com
+  - name: "\U0001F1E9\U0001F1EA德国17 | ⬇️ 12.7MB/s"
+    network: ws
+    port: 80
+    server: 45.131.208.198
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/70.0.3538.77 Safari/537.36
+      path: '/Telegram:'
+    xudp: true
+  - name: "\U0001F1E9\U0001F1EA德国18 | ⬇️ 2.1MB/s"
+    network: ws
+    port: 80
+    server: 45.142.120.99
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/65.0.3325.181 Safari/537.36
+      path: '/Telegram: @vpnAndroid2/?ed=2560'
+    xudp: true
+  - name: "\U0001F1FA\U0001F1F8美国18 | ⬇️ 3.7MB/s"
+    network: ws
+    port: 80
+    server: 45.131.208.6
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/69.0.3497.100 Safari/537.36
+      path: '/Telegram: @vpnAndroid2/?ed=2560'
+    xudp: true
+  - name: "\U0001F1F8\U0001F1EC新加坡6 | ⬇️ 2.1MB/s"
     network: ws
     port: 80
     server: 141.193.213.20
@@ -1092,128 +1169,233 @@ proxies:
       headers:
         Host: 14.sahanwickramasinghe.shop
         User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like
-          Gecko) Chrome/26.0.1410.64 Safari/537.31
+          Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/62.0.3202.89 Safari/537.36
       path: /
     xudp: true
-  - alpn:
-      - h1
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
+    servername: 14.sahanwickramasinghe.shop
+  - name: "\U0001F1FA\U0001F1F8美国19 | ⬇️ 12.7MB/s"
+    network: ws
+    port: 80
+    server: 185.162.229.205
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML,
+          like Gecko) Chrome/55.0.2883.87 Safari/537.36
+      path: '/Telegram:@vpnAndroid2/?ed=2560'
+    xudp: true
+  - name: "\U0001F1F0\U0001F1F7韩国8 | ⬇️ 1.3MB/s"
+    network: ws
+    port: 80
+    server: 45.131.6.122
+    type: vless
+    udp: true
+    uuid: 53fa8faf-ba4b-4322-9c69-a3e5b1555049
+    ws-opts:
+      headers:
+        Host: reedfree8mahsang2.redorg.ir
+        User-Agent: >-
+          Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/51.0.2704.106 Safari/537.36
+      path: '/Telegram:'
+    xudp: true
+  - name: "\U0001F1F8\U0001F1EC新加坡7 | ⬇️ 1.6MB/s"
+    network: ws
+    port: 80
+    server: 170.114.46.6
+    type: vless
+    udp: true
+    uuid: 438f9559-1671-45cf-9d2c-338fe6766acf
+    ws-opts:
+      headers:
+        Host: 14.sahanwickramasinghe.shop
+        User-Agent: >-
+          Mozilla/5.0 (Linux; Android 8.0.0; ANE-LX3 Build/HUAWEIANE-LX3)
+          AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile
+          Safari/537.36
+      path: /
+    xudp: true
+  - cipher: chacha20-ietf-poly1305
+    name: "\U0001F1E8\U0001F1E6加拿大1 | ⬇️ 2.3MB/s"
+    password: 1XuU009y8W4lZBcS4EELRa
+    port: 60533
+    server: 141.195.112.163
+    type: ss
+    udp: true
+  - cipher: chacha20-ietf-poly1305
+    name: "\U0001F1F3\U0001F1F1荷兰6 | ⬇️ 8.1MB/s"
+    password: OhsqGqwUVxGwlhRqnUhOC5
+    port: 1090
+    server: 62.60.239.203
+    type: ss
+    udp: true
+  - cipher: aes-256-cfb
+    name: "\U0001F300其他8-VN | ⬇️ 1.0MB/s"
+    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+    port: 38388
+    server: 103.186.155.21
+    type: ss
+    udp: true
+  - down: ''
+    fingerprint: ''
+    name: "\U0001F1EB\U0001F1F7法国2 | ⬇️ 3.5MB/s"
+    obfs: ''
+    obfs-password: ''
+    password: dongtaiwang.com
+    port: 4489
+    server: hy2-1.694463.xyz
+    skip-cert-verify: true
+    sni: www.bing.com
+    type: hysteria2
+    up: ''
+  - down: ''
+    fingerprint: ''
+    name: "\U0001F1FA\U0001F1F8美国20 | ⬇️ 4.7MB/s"
+    obfs: ''
+    obfs-password: ''
+    password: b8bd42a9-551f-419d-b70d-4aefdd2cb074
+    port: 443
+    server: 208.87.242.215
+    skip-cert-verify: true
+    sni: www.bing.com
+    type: hysteria2
+    up: ''
+  - down: ''
+    fingerprint: ''
+    name: "\U0001F1FA\U0001F1F8美国21 | ⬇️ 3.8MB/s"
+    obfs: ''
+    obfs-password: ''
+    password: b8bd42a9-551f-419d-b70d-4aefdd2cb074
+    port: 443
+    server: 108.181.23.255
+    skip-cert-verify: true
+    sni: www.bing.com
+    type: hysteria2
+    up: ''
+  - down: ''
+    fingerprint: ''
+    name: "\U0001F1FA\U0001F1F8美国22 | ⬇️ 1.9MB/s"
+    obfs: ''
+    obfs-password: ''
+    password: b72ba5d5-2d5e-45b7-93b5-236d343baa7c
+    port: 47262
+    server: 64.181.207.162
+    skip-cert-verify: true
+    sni: www.bing.com
+    type: hysteria2
+    up: ''
+  - down: ''
+    fingerprint: ''
+    name: "\U0001F1FA\U0001F1F8美国23 | ⬇️ 2.7MB/s"
+    obfs: ''
+    obfs-password: ''
+    password: 14bdcd31-8a9f-4cf1-8fcc-60045900357d
+    port: 3002
+    server: us.10101251.xyz
+    skip-cert-verify: false
+    sni: us.10101251.xyz
+    type: hysteria2
+    up: ''
+  - client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: >-
+        Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs_Telegram_configMs
+    name: "\U0001F300其他9-MD | ⬇️ 2.8MB/s"
+    network: grpc
+    port: 443
+    reality-opts:
+      public-key: u28jiCcALXYBSmP5K1-aY4VBd6UdUjNxJBcZ-si0YCo
+      short-id: d480
+    server: Karaj-Website.acveo.ir
+    tls: true
+    type: vless
+    udp: true
+    uuid: 538ad535-f6ec-4dd6-bc41-b36fb3b7b923
+    xudp: true
+    servername: www.cdn77.com
+  - grpc-opts:
+      grpc-service-name: n1.boutiqueman.shop
+    name: "\U0001F1E9\U0001F1EA德国19 | ⬇️ 3.4MB/s"
+    network: grpc
+    port: 80
+    server: n1.boutiqueman.shop
+    type: vless
+    udp: true
+    uuid: join@V2rayvpn_official
+    xudp: true
+  - alterId: 0
+    cipher: auto
+    h2-opts: {}
     http-opts:
-      headers: {}
+      method: GET
       path:
         - /
-    name: "\U0001F300其他3-LV | ⬇️ 3.8MB/s"
-    network: tcp
-    port: 6003
-    reality-opts:
-      public-key: EnZCoW0ZE047unVnwVg6jOTWxCvAbj3OrweS_ANYCVg
-      short-id: 34d8ddb4971913eb
-    server: cs_office.hideshots.eu
-    tls: true
-    type: vless
-    udp: true
-    uuid: e34e5748-c75c-4847-bbc9-a389da28a1a2
-    xudp: true
-    servername: t.me
-  - client-fingerprint: chrome
-    name: "\U0001F300其他4-TR | ⬇️ 5.5MB/s"
-    network: tcp
-    port: 55555
-    reality-opts:
-      public-key: 1zxVP27bDf_TlHFEbBne26fdhCFPftpB9zt7-nCd8HQ
-      short-id: 867599a1433d8a1e
-    server: grtsgsj.subscripshn.sbs
-    tls: true
-    type: vless
-    udp: true
-    uuid: 1799b29e-d587-4ad7-b58e-5ef51c158173
-    xudp: true
-    servername: stackoverflow.com
-  - client-fingerprint: chrome
-    name: "\U0001F1F3\U0001F1F1荷兰6 | ⬇️ 7.3MB/s"
-    network: ws
-    port: 443
-    server: www.speedtest.net
-    tls: true
-    type: vless
-    udp: true
-    uuid: 838f5273-5d2d-4630-a0f5-9cc8e4aef4d6
-    ws-opts:
-      headers:
-        Host: ZgPrMnBc2.ZuMuT.InFo
-        User-Agent: >-
-          Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-          Gecko) Chrome/31.0.1650.57 Safari/537.36
-      path: /
-    xudp: true
-    servername: ZgPrMnBc2.ZuMuT.InFo
-  - client-fingerprint: chrome
-    fingerprint: ''
-    name: "\U0001F300其他5-SE | ⬇️ 1.1MB/s"
-    network: ws
-    port: 22224
-    server: 13.60.153.19
-    tls: true
-    type: vless
-    udp: false
-    uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
-    ws-opts:
-      headers:
-        Host: trojan.burgerip.co.uk
-      path: /telegram-channel-vlessconfig
-    servername: trojan.burgerip.co.uk
-  - alterId: '0'
-    cipher: auto
-    name: "\U0001F1EB\U0001F1F7法国8 | ⬇️ 4.4MB/s"
-    network: ws
-    port: 443
-    server: cloudgetservice.mcloudservice.site
-    skip-cert-verify: false
-    tls: true
+    name: "\U0001F1ED\U0001F1F0香港3 | ⬇️ 2.3MB/s"
+    network: http
+    port: 3000
+    server: 18.162.203.189
     type: vmess
     udp: true
-    uuid: cbe129db-24fa-4bb5-99de-03a6e7b1604c
-    ws-opts:
-      headers:
-        Host: MaxNEtVipAp-fr1.maXnEtServICES.onliNe
-      path: /linkws
-    xudp: true
-    servername: cloudgetservice.mcloudservice.site
-  - client-fingerprint: chrome
-    name: "\U0001F1E8\U0001F1E6加拿大1 | ⬇️ 1.9MB/s"
+    uuid: cc101ff1-3452-41c3-89fe-c2a5a20dc6dc
+  - alterId: 0
+    cipher: auto
+    country: "\U0001F1F0\U0001F1F7KR"
+    h2-opts: {}
+    http-opts: {}
+    name: "\U0001F1F0\U0001F1F7韩国9 | ⬇️ 3.5MB/s"
     network: ws
-    port: 2096
-    server: whatismyipaddress.com
-    tls: true
-    type: vless
+    port: 40328
+    server: 118.43.141.175
+    skip-cert-verify: true
+    type: vmess
+    uuid: 5b940680-f5b1-43ff-abc3-7085666eb94d
+    ws-opts:
+      path: /5b940680
+  - cipher: aes-256-cfb
+    name: "\U0001F1F0\U0001F1F7韩国10 | ⬇️ 3.3MB/s"
+    password: qwerREWQ@@
+    port: 4857
+    server: p227.panda004.net
+    type: ss
     udp: true
-    uuid: 84c1aca2-d9d4-4f6d-8f31-f38ba5df12e6
-    ws-opts:
-      headers:
-        Host: wwwspeedtestnetwhiteberinsistomd6625996s26.elitemizban.ir
-        User-Agent: >-
-          Mozilla/5.0 (Linux; Android 7.0; SM-G610M) AppleWebKit/537.36 (KHTML,
-          like Gecko) Chrome/70.0.3538.80 Mobile Safari/537.36
-      path: /
-    xudp: true
-    servername: wwwspeedtestnetwhiteberinsistomd6625996s26.elitemizban.ir
-  - client-fingerprint: chrome
-    fingerprint: ''
-    name: "\U0001F1EB\U0001F1F7法国9 | ⬇️ 1.4MB/s"
+  - alterId: 0
+    cipher: auto
+    country: "\U0001F1F0\U0001F1F7KR"
+    h2-opts: {}
+    http-opts: {}
+    name: "\U0001F1F0\U0001F1F7韩国11 | ⬇️ 6.8MB/s"
     network: ws
-    port: 2096
-    server: whatismyipaddress.com
-    tls: true
-    type: vless
-    udp: false
-    uuid: 2404f667-5969-4883-a71a-ea2e0db2d25b
+    port: 55638
+    server: 118.43.157.197
+    skip-cert-verify: true
+    type: vmess
+    uuid: 76302f2e-f31f-4040-bf97-ad4c7d1cd4bc
     ws-opts:
-      headers:
-        Host: wwwspeedtestnetwhiteberinsistomd6625996s15.fgcloud66.ir
-      path: /
-    servername: wwwspeedtestnetwhiteberinsistomd6625996s15.fgcloud66.ir
+      path: /76302f2e
+  - cipher: chacha20-ietf-poly1305
+    country: "\U0001F1EC\U0001F1E7GB"
+    name: "\U0001F1F3\U0001F1F1荷兰7 | ⬇️ 1.4MB/s"
+    password: 5373816546GV5U8BxZ1L4
+    port: 443
+    server: nl1.outline-vpn.top
+    type: ss
+  - alterId: 0
+    cipher: auto
+    country: "\U0001F1FF\U0001F1E6ZA"
+    h2-opts: {}
+    http-opts: {}
+    name: "\U0001F1FA\U0001F1F8美国24 | ⬇️ 1.0MB/s"
+    network: tcp
+    port: 13248
+    server: 156.244.16.130
+    skip-cert-verify: true
+    type: vmess
+    uuid: ee7acc0a-d94c-48e7-b526-baa0a8567de0
 proxy-groups:
   - name: "\U0001F680 节点选择"
     type: select
