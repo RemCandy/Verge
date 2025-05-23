@@ -265,6 +265,7 @@ rules:
   - RULE-SET,telegram_domain,Telegram
   - RULE-SET,docker_domain,下载
   - RULE-SET,cn_domain,国内
+  - RULE-SET,ai_domain,OpenAI
   - RULE-SET,openai_domain,OpenAI
   - RULE-SET,microsoft_domain,Microsoft
   - RULE-SET,geolocation-!cn,其他
@@ -320,6 +321,9 @@ rule-providers:
   telegram_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.list"
+  ai_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/hughzone/clash/refs/heads/main/AI3.list"
   openai_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.list"    
@@ -366,3 +370,4 @@ rule-providers:
   telegram_ip:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
+
